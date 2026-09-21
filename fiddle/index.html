@@ -1,13 +1,10 @@
 <!doctype html>
-<html lang="sr-Latn">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Politika privatnosti aplikacije Fiddle / Fiddle privacy policy">
+<meta name="description" content="Fiddle privacy policy / Politika privatnosti aplikacije Fiddle">
 <title>Fiddle Privacy Policy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=JetBrains+Mono:wght@400;500&display=swap">
 
 <style>
   :root {
@@ -311,28 +308,24 @@
   <div class="masthead-inner">
     <div class="brand">
       <span class="brand-mark">Fiddle</span>
-      <span class="brand-sub" data-t="kicker">Politika privatnosti</span>
+      <span class="brand-sub" data-t="kicker">Privacy Policy</span>
     </div>
     <div class="langswitch" role="group" aria-label="Jezik / Language">
-      <button type="button" data-lang="sr" aria-pressed="true">Srpski</button>
-      <button type="button" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" data-lang="sr" aria-pressed="false">Srpski</button>
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
     </div>
   </div>
 </header>
 
 <!-- ===================== SRPSKI ===================== -->
-<main id="doc-sr">
+<main id="doc-sr" hidden>
   <h1>Politika privatnosti</h1>
   <p class="meta">
     <span>Aplikacija: Fiddle</span>
     <span>Programer: nemgic</span>
-    <span>com.grgic.fiddle</span>
-    <span>Poslednja izmena: 14. septembar 2026.</span>
+    <span>com.nemgic.fiddle</span>
+    <span>Poslednja izmena: 21. septembar 2026.</span>
   </p>
-
-  <div class="todo">
-    <b>Pre objavljivanja:</b> zameniti adresu za kontakt na dnu stranice pravom adresom. Ovo obaveštenje se uklanja pre unosa adrese u Google Play Console.
-  </div>
 
   <p class="lede">Fiddle ne prikuplja nikakve podatke o vama. Nema server, nema korisnički nalog, i ništa ne napušta vaš uređaj — osim tokom opcione, direktne veze sa uređajima vaših članova benda na istoj Wi-Fi mreži.</p>
 
@@ -355,7 +348,12 @@
     <div class="perm">
       <span class="perm-name">android.permission.RECORD_AUDIO</span>
       <span class="perm-label">Mikrofon</span>
-      <p>Koristi se isključivo za jednokratno merenje kašnjenja zvuka uređaja. Aplikacija pušta niz kratkih tonova i meri kada ih mikrofon čuje, da bi metronom kliknuo u istom trenutku na svim telefonima. <strong>Zvuk se ne snima, ne čuva i ne šalje nigde</strong> — meri se samo vreme. Dozvolu dajete kada pokrenete kalibraciju i možete je uskratiti; sve ostalo u aplikaciji radi bez mikrofona.</p>
+      <p>Koristi se u dva dela aplikacije. Prvo, u <strong>štimeru</strong>: mikrofon sluša ton žice sve dok je ekran štimera otvoren, da bi izmerio visinu tona i pokazao da li je viša ili niža od željene. Kod bubnja štimer na isti način meri visinu tona posebno na svakom šrafu obruča i pokazuje koji treba zategnuti ili opustiti da bi svi šrafovi bili ujednačeni. Drugo, pri <strong>merenju kašnjenja zvuka</strong> pre sesije uživo: aplikacija pušta niz kratkih tonova i meri kada ih mikrofon čuje, da bi metronom kliknuo u istom trenutku na svim telefonima. U oba slučaja zvuk se obrađuje odmah, u memoriji telefona, i <strong>nikada se ne snima kao fajl, ne čuva se i ne šalje nigde</strong>. Kada napustite ekran štimera ili završite kalibraciju, mikrofon se prestaje koristiti. Dozvolu dajete kada prvi put otvorite jednu od ove dve funkcije i možete je uskratiti; sve ostalo u aplikaciji radi bez mikrofona.</p>
+    </div>
+    <div class="perm">
+      <span class="perm-name">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE / CHANGE_WIFI_MULTICAST_STATE</span>
+      <span class="perm-label">Stanje mreže i multicast</span>
+      <p>Potrebne da bi uređaji članova benda pronašli jedan drugog na istoj Wi-Fi mreži (mDNS otkrivanje servisa) i ostali povezani. Koriste se isključivo za Sesiju uživo i ne daju pristup internetu.</p>
     </div>
     <div class="perm">
       <span class="perm-name">android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
@@ -380,7 +378,8 @@
   </div>
 
   <h2>Sesija uživo — jedina mrežna funkcija</h2>
-  <p>Članovi benda na istoj Wi-Fi mreži mogu direktno povezati svoje uređaje. Razmenjuju se pesma koja se trenutno svira, ton, kapo, tempo i signal za zajednički klik metronoma. <strong>Ovi podaci ne napuštaju lokalnu mrežu i ne prolaze kroz nijedan server.</strong> Pridruživanje sesiji je dobrovoljno i traje samo dok je držite otvorenom.</p>
+  <p>Članovi benda na istoj Wi-Fi mreži mogu direktno povezati svoje uređaje. Razmenjuju se pesma koja se trenutno svira, ton, kapo, tempo i signal za zajednički klik metronoma. <strong>Ovi podaci ne napuštaju lokalnu mrežu i ne prolaze kroz nijedan server.</strong> Veza ide direktno između uređaja i <strong>nije šifrovana</strong>, pa sesiju uživo koristite na Wi-Fi mreži kojoj verujete — na primer na probi ili nastupu, a ne na javnoj mreži koju deli mnogo nepoznatih uređaja.</p>
+  <p>Kada primite pesmu ili plejlistu od vođe sesije, ona se <strong>trajno upisuje u vašu biblioteku</strong> na telefonu i ostaje tu i nakon što se sesija završi — isto kao da ste je sami uneli. Ako ne želite da je zadržite, obrišite je iz biblioteke kao i svaku drugu pesmu. Pridruživanje sesiji je dobrovoljno i traje samo dok je držite otvorenom.</p>
 
   <h2>Uvoz pesama</h2>
   <p>Sami birate svoje fajlove kroz sistemski birač fajlova. Fajl se čita lokalno na uređaju i nikada se ne šalje nigde. Aplikacija ne preuzima sadržaj pesama sa interneta.</p>
@@ -411,18 +410,14 @@
 </main>
 
 <!-- ===================== ENGLISH ===================== -->
-<main id="doc-en" hidden>
+<main id="doc-en">
   <h1>Privacy Policy</h1>
   <p class="meta">
     <span>App: Fiddle</span>
     <span>Developer: nemgic</span>
-    <span>com.grgic.fiddle</span>
-    <span>Last updated: 14 September 2026</span>
+    <span>com.nemgic.fiddle</span>
+    <span>Last updated: 21 September 2026</span>
   </p>
-
-  <div class="todo">
-    <b>Before publishing:</b> replace the contact address at the bottom of this page with a real one. This notice is removed before the URL goes into Google Play Console.
-  </div>
 
   <p class="lede">Fiddle does not collect any data about you. There is no server, no account, and nothing leaves your device — except during an optional, direct connection to your own band members' devices on the same Wi-Fi network.</p>
 
@@ -445,7 +440,12 @@
     <div class="perm">
       <span class="perm-name">android.permission.RECORD_AUDIO</span>
       <span class="perm-label">Microphone</span>
-      <p>Used solely for a one-time measurement of the device's audio latency. The app plays a series of short tones and measures when the microphone hears them, so the metronome can click at the same instant on every phone. <strong>Audio is never recorded, stored, or sent anywhere</strong> — only timing is measured. You grant this permission when you start the calibration and may decline it; everything else in the app works without the microphone.</p>
+      <p>Used in two parts of the app. First, in the <strong>tuner</strong>: the microphone listens to a plucked string for as long as the tuner screen is open, to measure the pitch and show whether it is higher or lower than the target. For drums, the tuner works the same way but measures the pitch at each rim lug separately, and shows which lug needs to be tightened or loosened to make them even. Second, during <strong>audio-latency measurement</strong> before a live session: the app plays a series of short tones and measures when the microphone hears them, so the metronome can click at the same instant on every phone. In both cases the sound is processed immediately, in the phone's memory, and it is <strong>never recorded to a file, stored, or sent anywhere</strong>. The microphone stops being used as soon as you leave the tuner screen or the calibration finishes. You grant this permission the first time you open either of these two features and may decline it; everything else in the app works without the microphone.</p>
+    </div>
+    <div class="perm">
+      <span class="perm-name">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE / CHANGE_WIFI_MULTICAST_STATE</span>
+      <span class="perm-label">Network state and multicast</span>
+      <p>Needed so band members' devices can find each other on the same Wi-Fi network (mDNS service discovery) and stay connected. Used solely for the Live Session and they grant no internet access.</p>
     </div>
     <div class="perm">
       <span class="perm-name">android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
@@ -470,7 +470,8 @@
   </div>
 
   <h2>Live Session — the only network feature</h2>
-  <p>Band members on the same Wi-Fi network can connect their devices directly. They exchange the song currently being played, the key, capo, tempo, and a shared metronome click signal. <strong>This data never leaves the local network and never passes through any server.</strong> Joining a session is voluntary and lasts only as long as you keep it open.</p>
+  <p>Band members on the same Wi-Fi network can connect their devices directly. They exchange the song currently being played, the key, capo, tempo, and a shared metronome click signal. <strong>This data never leaves the local network and never passes through any server.</strong> The connection is direct, device-to-device, and <strong>is not encrypted</strong>, so use Live Session on a Wi-Fi network you trust — such as at rehearsal or a gig — rather than a public network shared with many unknown devices.</p>
+  <p>When you receive a song or playlist from the session leader, it is <strong>permanently saved to your own library</strong> on your phone and stays there after the session ends, just as if you had added it yourself. If you don't want to keep it, delete it from your library like any other song. Joining a session is voluntary and lasts only as long as you keep it open.</p>
 
   <h2>Importing songs</h2>
   <p>You pick your own files through the system file picker. The file is read locally on your device and is never sent anywhere. The app does not download song content from the internet.</p>
@@ -497,11 +498,11 @@
   <p>If this policy changes, the updated version will be published at this same address, with a new last-updated date at the top.</p>
 
   <h2>Contact</h2>
-  <p>For questions about this policy, contact: <code>[CONTACT-EMAIL]</code></p>
+  <p>For questions about this policy, contact: <code>grgicnemanja@gmail.com</code></p>
 </main>
 
 <footer>
-  <span data-t="footer">Fiddle — pesmarica sa akordima. Sve ostaje na vašem uređaju.</span>
+  <span data-t="footer">Fiddle — a chord book for musicians. Everything stays on your device.</span>
 </footer>
 
 <script>
@@ -529,7 +530,9 @@
       try { localStorage.setItem(KEY, lang); } catch (e) { /* private mode */ }
     }
 
-    var initial = 'sr';
+    var initial = 'en';
+    var nav = (navigator.language || '').toLowerCase();
+    if (/^(sr|hr|bs|me)/.test(nav)) initial = 'sr';
     try {
       var saved = localStorage.getItem(KEY);
       if (saved === 'sr' || saved === 'en') initial = saved;
