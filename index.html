@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nemgic Software builds small, private apps for musicians, starting with Fiddle — an offline chord songbook.">
+<title>Nemgic Software</title>
+<link rel="icon" href="fiddle-icon.png" type="image/png">
+<link rel="canonical" href="https://nemgic.com/">
+<meta name="theme-color" content="#b5462a">
+
+<style>
+  :root {
+    --bg:        #f7f7f8;
+    --surface:   #ffffff;
+    --ink:       #1c1d21;
+    --ink-soft:  #55575f;
+    --ink-faint: #83868f;
+    --rule:      #e2e2e6;
+    --rule-soft: #eeeef1;
+    --accent:    #b5462a;
+    --accent-dim:#8f3720;
+
+    --display: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+    --body: 'Literata', Georgia, 'Times New Roman', serif;
+  }
+
+  :root:not([data-theme="light"]) { color-scheme: light; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:        #131417;
+      --surface:   #1a1c20;
+      --ink:       #e9e9ec;
+      --ink-soft:  #a9abb3;
+      --ink-faint: #7c7f88;
+      --rule:      #2c2e34;
+      --rule-soft: #232529;
+      --accent:    #e2765a;
+      --accent-dim:#f0937a;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg:        #131417;
+    --surface:   #1a1c20;
+    --ink:       #e9e9ec;
+    --ink-soft:  #a9abb3;
+    --ink-faint: #7c7f88;
+    --rule:      #2c2e34;
+    --rule-soft: #232529;
+    --accent:    #e2765a;
+    --accent-dim:#f0937a;
+    color-scheme: dark;
+  }
+
+  html { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; }
+
+  main { max-width: 34rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  .hero { text-align: center; padding: 3.2rem 1.5rem 2.4rem; }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-size: clamp(1.9rem, 7vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.6rem;
+  }
+
+  .hero p {
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  section { padding: 2rem 0; border-top: 1px solid var(--rule-soft); }
+
+  h2 {
+    font-family: var(--display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 1.1rem;
+  }
+
+  .app-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.2rem;
+  }
+
+  .app-card img {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  .app-card h3 {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
+  }
+
+  .app-card p { margin: 0 0 0.5rem; color: var(--ink-soft); font-size: 0.95rem; }
+
+  .soon {
+    font-family: var(--display);
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-faint);
+    margin: 0 0 0.6rem;
+  }
+
+  .privacy-link {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent-dim);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .privacy-link:hover { color: var(--accent); }
+
+  footer {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem 3rem;
+    font-family: var(--display);
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+  }
+
+  footer a { color: var(--ink-faint); }
+  footer a:hover { color: var(--accent-dim); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Nemgic Software</h1>
+  <p>Small, private apps for musicians.</p>
+</div>
+
+<main>
+  <section id="apps">
+    <h2>Apps</h2>
+    <div class="app-card">
+      <img src="fiddle-icon.png" alt="Fiddle app icon">
+      <div>
+        <h3>Fiddle</h3>
+        <p>A chord songbook for musicians and bands. Works offline, with no accounts, ads, or tracking.</p>
+        <!-- when public, link this to https://play.google.com/store/apps/details?id=com.nemgic.fiddle -->
+        <p class="soon">Coming soon to Google Play</p>
+        <a class="privacy-link" href="/fiddle/">Privacy policy</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>&copy; 2026 Nemgic Software</span>
+  <a href="mailto:support@nemgic.com">support@nemgic.com</a>
+</footer>
+
+</body>
+</html>
