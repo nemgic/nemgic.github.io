@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Fiddle privacy policy / Politika privatnosti aplikacije Fiddle">
-<title>Fiddle Privacy Policy</title>
+<meta name="description" content="Fiddle privacy policy — what the app does and does not collect, in your language.">
+<link rel="canonical" href="https://nemgic.com/fiddle/">
+<link rel="icon" href="../fiddle-icon.png">
+<meta name="theme-color" content="#b5462a" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)">
+<title>Fiddle — Privacy Policy</title>
 
 <style>
   :root {
@@ -123,23 +127,25 @@
   /* ---------- language switch ---------- */
 
   .langswitch {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
     border: 1px solid var(--rule);
-    border-radius: 999px;
-    padding: 3px;
+    border-radius: 14px;
+    padding: 4px;
     background: var(--bg);
     gap: 2px;
   }
 
   .langswitch button {
     font-family: var(--display);
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
-    padding: 0.42rem 0.9rem;
+    padding: 0.4rem 0.62rem;
     border: 0;
-    border-radius: 999px;
+    border-radius: 10px;
     background: transparent;
     color: var(--ink-soft);
     cursor: pointer;
@@ -159,6 +165,14 @@
   .langswitch button:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
+  }
+
+  @media (max-width: 420px) {
+    .langswitch { border-radius: 12px; }
+    .langswitch button {
+      font-size: 0.66rem;
+      padding: 0.36rem 0.5rem;
+    }
   }
 
   /* ---------- document ---------- */
@@ -250,6 +264,12 @@
     word-break: break-word;
   }
 
+  .perm-name code {
+    background: none;
+    color: inherit;
+    padding: 0;
+  }
+
   .perm-label {
     font-family: var(--display);
     font-weight: 600;
@@ -258,22 +278,6 @@
   }
 
   .perm p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
-
-  /* ---------- editor note ---------- */
-
-  .todo {
-    background: var(--note-bg);
-    border: 1px solid var(--note-rule);
-    border-radius: 6px;
-    padding: 0.9rem 1.1rem;
-    margin: 0 0 2.4rem;
-    font-family: var(--display);
-    font-size: 0.88rem;
-    line-height: 1.5;
-    color: var(--note-ink);
-  }
-
-  .todo b { font-weight: 700; }
 
   /* ---------- footer ---------- */
 
@@ -288,6 +292,8 @@
     border-top: 1px solid var(--rule-soft);
     padding-top: 1.3rem;
   }
+
+  footer a { color: inherit; }
 
   [hidden] { display: none !important; }
 
@@ -308,242 +314,1663 @@
   <div class="masthead-inner">
     <div class="brand">
       <span class="brand-mark">Fiddle</span>
-      <span class="brand-sub" data-t="kicker">Privacy Policy</span>
+      <span class="brand-sub">Privacy Policy</span>
     </div>
-    <div class="langswitch" role="group" aria-label="Jezik / Language">
-      <button type="button" data-lang="sr" aria-pressed="false">Srpski</button>
-      <button type="button" data-lang="en" aria-pressed="true">English</button>
-    </div>
+    <div class="langswitch" id="langswitch" role="group" aria-label="Language"></div>
   </div>
 </header>
 
-<!-- ===================== SRPSKI ===================== -->
-<main id="doc-sr" hidden>
-  <h1>Politika privatnosti</h1>
-  <p class="meta">
-    <span>Aplikacija: Fiddle</span>
-    <span>Programer: nemgic</span>
-    <span>com.nemgic.fiddle</span>
-    <span>Poslednja izmena: 21. septembar 2026.</span>
-  </p>
+<main>
+<article lang="en" data-title="Fiddle — Privacy Policy">
+<h1>Privacy Policy</h1>
+<p class="meta">
+  <span>App: Fiddle</span>
+  <span>Developer: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Last updated: 21 September 2026</span>
+</p>
 
-  <p class="lede">Fiddle ne prikuplja nikakve podatke o vama. Nema server, nema korisnički nalog, i ništa ne napušta vaš uređaj — osim tokom opcione, direktne veze sa uređajima vaših članova benda na istoj Wi-Fi mreži.</p>
+<p class="lede">Fiddle does not collect any data about you. There is no server, no account, and nothing leaves your device — except during an optional, direct connection to your own band members' devices on the same Wi-Fi network.</p>
 
-  <h2>Sažetak</h2>
-  <p>Fiddle je pesmarica sa akordima za muzičare: biblioteka pesama, transpozicija, kapo, dijagrami akorda, metronom, setliste, režim nastupa sa automatskim skrolovanjem i sesija uživo za usklađivanje članova benda. Aplikacija nema server, nema korisničke naloge i nema prijavu. Sama aplikacija nikada ne šalje nijedan mrežni zahtev ka internetu.</p>
+<h2>Summary</h2>
+<p>Fiddle is a chord book for musicians: a song library, transposition, capo, chord diagrams, a metronome, setlists, a performance mode with auto-scroll, and a live session for keeping a band in sync. The app has no backend server, no user accounts, and no login. The app itself never sends a single network request to the internet.</p>
+<p>Tapping the privacy-policy link, the “Contact” and “Report content” buttons, or a source link stored with a song you imported opens your browser or e-mail app; what those apps do is governed by their own policies.</p>
 
-  <h2>Koje podatke prikupljamo</h2>
-  <p>Nikakve. Fiddle nema analitiku, telemetriju, reklamne SDK-ove ni prijavljivanje grešaka trećim stranama. Programer ne prima, ne vidi i ne čuva nikakve vaše podatke.</p>
+<h2>What data we collect</h2>
+<p>None. Fiddle has no analytics, no telemetry, no advertising SDKs, and no third-party crash reporting. The developer does not receive, see, or store any of your data.</p>
 
-  <h2>Gde se čuvaju vaši podaci</h2>
-  <p>Sve se čuva isključivo lokalno na vašem uređaju, u lokalnoj bazi podataka: pesme (tekst i akordi), plejliste i setliste, bendovi sa imenima i instrumentima članova, podešavanja i beleške. Deinstalacija aplikacije briše sve ove podatke.</p>
+<h2>Where your data lives</h2>
+<p>Everything is stored locally on your device, in a local database: your songs (lyrics and chords), playlists and setlists, bands with member names and instruments, settings, and notes. Uninstalling the app deletes all of it.</p>
 
-  <h2>Dozvole i zašto su potrebne</h2>
-  <div class="perms">
-    <div class="perm">
-      <span class="perm-name">android.permission.INTERNET</span>
-      <span class="perm-label">Internet</span>
-      <p>Ne koristi se za pristup internetu. Android traži ovu dozvolu za svaku mrežnu vezu, uključujući i vezu na lokalnoj Wi-Fi mreži, koja se koristi samo za funkciju Sesija uživo opisanu ispod.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.RECORD_AUDIO</span>
-      <span class="perm-label">Mikrofon</span>
-      <p>Koristi se u dva dela aplikacije. Prvo, u <strong>štimeru</strong>: mikrofon sluša ton žice sve dok je ekran štimera otvoren, da bi izmerio visinu tona i pokazao da li je viša ili niža od željene. Kod bubnja štimer na isti način meri visinu tona posebno na svakom šrafu obruča i pokazuje koji treba zategnuti ili opustiti da bi svi šrafovi bili ujednačeni. Drugo, pri <strong>merenju kašnjenja zvuka</strong> pre sesije uživo: aplikacija pušta niz kratkih tonova i meri kada ih mikrofon čuje, da bi metronom kliknuo u istom trenutku na svim telefonima. U oba slučaja zvuk se obrađuje odmah, u memoriji telefona, i <strong>nikada se ne snima kao fajl, ne čuva se i ne šalje nigde</strong>. Kada napustite ekran štimera ili završite kalibraciju, mikrofon se prestaje koristiti. Dozvolu dajete kada prvi put otvorite jednu od ove dve funkcije i možete je uskratiti; sve ostalo u aplikaciji radi bez mikrofona.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE / CHANGE_WIFI_MULTICAST_STATE</span>
-      <span class="perm-label">Stanje mreže i multicast</span>
-      <p>Potrebne da bi uređaji članova benda pronašli jedan drugog na istoj Wi-Fi mreži (mDNS otkrivanje servisa) i ostali povezani. Koriste se isključivo za Sesiju uživo i ne daju pristup internetu.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
-      <span class="perm-label">Servis u prvom planu</span>
-      <p>Da metronom nastavi da svira kada se ekran ugasi tokom nastupa.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.MODIFY_AUDIO_SETTINGS</span>
-      <span class="perm-label">Izmena audio podešavanja</span>
-      <p>Potrebno za reprodukciju metronoma i zvuka akorda.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.VIBRATE</span>
-      <span class="perm-label">Vibracija</span>
-      <p>Haptički odziv na dodir.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE</span>
-      <span class="perm-label">Pristup fajlovima — samo Android 12 i stariji</span>
-      <p>Ograničeno na <code>maxSdkVersion=32</code>. Potrebno da biste izabrali svoj fajl za uvoz pesme i sačuvali izvezeni PDF.</p>
-    </div>
+<h2>Permissions and why they are needed</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Not used to reach the internet. Android requires this permission for any network connection, including one on a local Wi-Fi network, which is the only thing it is used for — the Live Session feature described below.</p>
   </div>
-
-  <h2>Sesija uživo — jedina mrežna funkcija</h2>
-  <p>Članovi benda na istoj Wi-Fi mreži mogu direktno povezati svoje uređaje. Razmenjuju se pesma koja se trenutno svira, ton, kapo, tempo i signal za zajednički klik metronoma. <strong>Ovi podaci ne napuštaju lokalnu mrežu i ne prolaze kroz nijedan server.</strong> Veza ide direktno između uređaja i <strong>nije šifrovana</strong>, pa sesiju uživo koristite na Wi-Fi mreži kojoj verujete — na primer na probi ili nastupu, a ne na javnoj mreži koju deli mnogo nepoznatih uređaja.</p>
-  <p>Kada primite pesmu ili plejlistu od vođe sesije, ona se <strong>trajno upisuje u vašu biblioteku</strong> na telefonu i ostaje tu i nakon što se sesija završi — isto kao da ste je sami uneli. Ako ne želite da je zadržite, obrišite je iz biblioteke kao i svaku drugu pesmu. Pridruživanje sesiji je dobrovoljno i traje samo dok je držite otvorenom.</p>
-
-  <h2>Uvoz pesama</h2>
-  <p>Sami birate svoje fajlove kroz sistemski birač fajlova. Fajl se čita lokalno na uređaju i nikada se ne šalje nigde. Aplikacija ne preuzima sadržaj pesama sa interneta.</p>
-
-  <h2>Izvoz i deljenje</h2>
-  <p>Pesmu možete izvesti kao PDF, običan tekst ili ChordPro, a celu biblioteku kao JSON fajl, kroz sistemski meni za deljenje. Odredište birate sami; aplikacija ne šalje ništa samoinicijativno.</p>
-
-  <h2>Android rezervna kopija</h2>
-  <p>Fiddle dozvoljava Android automatsku rezervnu kopiju, pa operativni sistem može da napravi rezervnu kopiju podataka aplikacije na vaš Google Drive nalog. To radi Android, ne aplikacija, i podleže Google-ovim uslovima korišćenja. Ovo možete isključiti u podešavanjima Androida.</p>
-
-  <h2>Deljenje sa trećim stranama</h2>
-  <p>Ne delimo podatke ni sa kim, jer ih ne prikupljamo.</p>
-
-  <h2>Bezbednost</h2>
-  <p>Pošto svi podaci ostaju na vašem uređaju i ne šalju se nama, ne postoje vaši podaci na serveru koje bi trebalo štititi. Standardna Android izolacija aplikacija štiti vaše lokalne podatke kao i kod svake druge aplikacije na uređaju.</p>
-
-  <h2>Deca</h2>
-  <p>Fiddle nije namenjen deci mlađoj od 13 godina i ne prikuplja podatke ni od koga, uključujući decu.</p>
-
-  <h2>Vaša prava i kontrola nad podacima</h2>
-  <p>Pošto se svi podaci čuvaju samo na vašem uređaju, potpuno ste u kontroli: u svakom trenutku možete pregledati, izmeniti, izvesti ili obrisati svoje pesme, plejliste i bendove unutar aplikacije, a deinstalacija aplikacije trajno briše sve podatke.</p>
-
-  <h2>Izmene ove politike</h2>
-  <p>Ako se ova politika izmeni, izmenjena verzija biće objavljena na istoj adresi, sa novim datumom poslednje izmene na vrhu.</p>
-
-  <h2>Kontakt</h2>
-  <p>Za pitanja o ovoj politici obratite se na: <code>support@nemgic.com</code></p>
-</main>
-
-<!-- ===================== ENGLISH ===================== -->
-<main id="doc-en">
-  <h1>Privacy Policy</h1>
-  <p class="meta">
-    <span>App: Fiddle</span>
-    <span>Developer: nemgic</span>
-    <span>com.nemgic.fiddle</span>
-    <span>Last updated: 21 September 2026</span>
-  </p>
-
-  <p class="lede">Fiddle does not collect any data about you. There is no server, no account, and nothing leaves your device — except during an optional, direct connection to your own band members' devices on the same Wi-Fi network.</p>
-
-  <h2>Summary</h2>
-  <p>Fiddle is a chord book for musicians: a song library, transposition, capo, chord diagrams, a metronome, setlists, a performance mode with auto-scroll, and a live session for keeping a band in sync. The app has no backend server, no user accounts, and no login. The app itself never sends a single network request to the internet.</p>
-
-  <h2>What data we collect</h2>
-  <p>None. Fiddle has no analytics, no telemetry, no advertising SDKs, and no third-party crash reporting. The developer does not receive, see, or store any of your data.</p>
-
-  <h2>Where your data lives</h2>
-  <p>Everything is stored locally on your device, in a local database: your songs (lyrics and chords), playlists and setlists, bands with member names and instruments, settings, and notes. Uninstalling the app deletes all of it.</p>
-
-  <h2>Permissions and why they are needed</h2>
-  <div class="perms">
-    <div class="perm">
-      <span class="perm-name">android.permission.INTERNET</span>
-      <span class="perm-label">Internet</span>
-      <p>Not used to reach the internet. Android requires this permission for any network connection, including one on a local Wi-Fi network, which is the only thing it is used for — the Live Session feature described below.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.RECORD_AUDIO</span>
-      <span class="perm-label">Microphone</span>
-      <p>Used in two parts of the app. First, in the <strong>tuner</strong>: the microphone listens to a plucked string for as long as the tuner screen is open, to measure the pitch and show whether it is higher or lower than the target. For drums, the tuner works the same way but measures the pitch at each rim lug separately, and shows which lug needs to be tightened or loosened to make them even. Second, during <strong>audio-latency measurement</strong> before a live session: the app plays a series of short tones and measures when the microphone hears them, so the metronome can click at the same instant on every phone. In both cases the sound is processed immediately, in the phone's memory, and it is <strong>never recorded to a file, stored, or sent anywhere</strong>. The microphone stops being used as soon as you leave the tuner screen or the calibration finishes. You grant this permission the first time you open either of these two features and may decline it; everything else in the app works without the microphone.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE / CHANGE_WIFI_MULTICAST_STATE</span>
-      <span class="perm-label">Network state and multicast</span>
-      <p>Needed so band members' devices can find each other on the same Wi-Fi network (mDNS service discovery) and stay connected. Used solely for the Live Session and they grant no internet access.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
-      <span class="perm-label">Foreground service</span>
-      <p>Lets the metronome keep playing when the screen turns off during a performance.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.MODIFY_AUDIO_SETTINGS</span>
-      <span class="perm-label">Modify audio settings</span>
-      <p>Required to play the metronome and chord sounds.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">android.permission.VIBRATE</span>
-      <span class="perm-label">Vibration</span>
-      <p>Haptic feedback on taps.</p>
-    </div>
-    <div class="perm">
-      <span class="perm-name">READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE</span>
-      <span class="perm-label">File access — Android 12 and older only</span>
-      <p>Limited to <code>maxSdkVersion=32</code>. Needed so you can pick your own file to import a song and save an exported PDF.</p>
-    </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Microphone</span>
+    <p>Used in two parts of the app. First, in the tuner: the microphone listens to a plucked string for as long as the tuner screen is open, to measure the pitch and show whether it is higher or lower than the target. For drums, the tuner works the same way but measures the pitch at each lug separately, and shows which lug needs to be tightened or loosened to make them even. Second, during a live session, when the leader starts an audio-latency measurement: the app plays a series of short tones and measures when the microphone hears them, so the metronome can click at the same instant on every phone. In both cases the sound is processed immediately, in the phone's memory, and it is never recorded to a file, stored, or sent anywhere. The app asks for this permission only after showing you what it is for — when you open the tuner, or when you tap "Allow the microphone" on the Live screen — and you may decline it; everything else in the app works without the microphone. The microphone stops being used as soon as you leave the tuner screen or the app goes to the background.</p>
   </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Network state and multicast</span>
+    <p>Needed so band members' devices can find each other on the same Wi-Fi network (mDNS service discovery, advertised as <code>_fiddle-lan._tcp</code> over TCP port <code>47811</code>) and stay connected. Used solely for the Live Session, and they grant no internet access.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Foreground service</span>
+    <p>Keeps the metronome playing when the screen turns off during a performance. While the metronome runs, Android shows a persistent "Metronome is playing" notification with a stop control; it is removed as soon as you stop the click.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Modify audio settings</span>
+    <p>Required to play the metronome and chord sounds.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibration</span>
+    <p>Haptic feedback on taps.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">File access — Android 12 and older only</span>
+    <p>Declared by a file library the app uses, limited to Android 12 and older (<code>maxSdkVersion=32</code>). Fiddle does not browse or write to your storage on its own: files you import are chosen through the system file picker, and exports are handed to the system share sheet, where you choose where they go.</p>
+  </div>
+</div>
 
-  <h2>Live Session — the only network feature</h2>
-  <p>Band members on the same Wi-Fi network can connect their devices directly. They exchange the song currently being played, the key, capo, tempo, and a shared metronome click signal. <strong>This data never leaves the local network and never passes through any server.</strong> The connection is direct, device-to-device, and <strong>is not encrypted</strong>, so use Live Session on a Wi-Fi network you trust — such as at rehearsal or a gig — rather than a public network shared with many unknown devices.</p>
-  <p>When you receive a song or playlist from the session leader, it is <strong>permanently saved to your own library</strong> on your phone and stays there after the session ends, just as if you had added it yourself. If you don't want to keep it, delete it from your library like any other song. Joining a session is voluntary and lasts only as long as you keep it open.</p>
+<h2>Live Session — the only network feature</h2>
+<p>Band members on the same Wi-Fi network can connect their devices directly. When you start a session, its name is announced on the local network and is visible to every device on that network. When you join, you send the leader the display name you typed and a random identifier generated by the app for your device (not a hardware or account ID); the leader shares the member list with everyone in the session. The leader sends the song currently being played and, if it was opened from a setlist, the setlist's name and order; songs you don't have — including the leader's personal notes, YouTube link, key, capo and tempo for that song — are copied to your device, and songs from the rest of the setlist may be copied ahead of time so they open instantly. This data never leaves the local network and never passes through any server. The connection is direct and is not encrypted or password-protected, so anyone on the same network could join or observe a session; use Live Session on a Wi-Fi network you trust. Songs received from the leader are saved to your library and stay there after the session ends; delete them like any other song if you don't want them. The setlist itself is not saved. Joining is voluntary and lasts only while you keep the session open.</p>
 
-  <h2>Importing songs</h2>
-  <p>You pick your own files through the system file picker. The file is read locally on your device and is never sent anywhere. The app does not download song content from the internet.</p>
+<h2>Importing songs</h2>
+<p>You pick your own files (text, <code>ChordPro</code>, Word, Excel, CSV, or a Fiddle library <code>JSON</code>, which is merged into your library) through the system file picker. Files are read locally and never sent anywhere.</p>
 
-  <h2>Export and sharing</h2>
-  <p>You can export a song as a PDF, plain text, or ChordPro, and your whole library as a JSON file, through the system share menu. You choose the destination; the app never sends anything on its own.</p>
+<h2>Export and sharing</h2>
+<p>You can export a song as PDF, plain text or <code>ChordPro</code>, a setlist or a band profile (including member names and instruments) as a <code>JSON</code> file, and your whole library — including notes, favourites and trashed songs — as a <code>JSON</code> backup, all through the system share menu. You choose the destination; the app never sends anything on its own.</p>
 
-  <h2>Android backup</h2>
-  <p>Fiddle allows Android's automatic backup, so the operating system may back up the app's data to your own Google Drive account. This is done by Android, not by the app, and is governed by Google's terms. You can turn it off in your Android settings.</p>
+<h2>Android backup</h2>
+<p>Fiddle opts out of Android's automatic app-data backup, so the operating system does not copy the app's data to your Google account. If you want a copy of your library, use "Save library backup (JSON)" in the app.</p>
 
-  <h2>Sharing with third parties</h2>
-  <p>We do not share data with anyone, because we do not collect any.</p>
+<h2>Temporary files</h2>
+<p>Exported or shared copies of your songs and library are written to the app's private cache and are replaced the next time you export or share. If the app's database becomes damaged, a dated copy of it may be kept in the app's private folder for recovery. All of this stays inside the app's private storage and is removed when you uninstall the app.</p>
 
-  <h2>Security</h2>
-  <p>Since all data stays on your device and none is transmitted to us, there is no data of yours on a server to protect. Standard Android app sandboxing protects your local data as it does for any other app on the device.</p>
+<h2>Sharing with third parties</h2>
+<p>We do not share data with anyone, because we do not collect any.</p>
 
-  <h2>Children</h2>
-  <p>Fiddle is not directed at children under 13, and it does not collect data from anyone, including children.</p>
+<h2>Security</h2>
+<p>Since all data stays on your device and none is transmitted to us, there is no data of yours on a server to protect. Standard Android app sandboxing protects your local data as it does for any other app on the device.</p>
 
-  <h2>Your rights and control over your data</h2>
-  <p>Because everything is stored only on your device, you are always in full control: you can view, edit, export, or delete your songs, playlists, and bands at any time inside the app, and uninstalling the app permanently deletes all of it.</p>
+<h2>Children</h2>
+<p>Fiddle is not directed at children under 13, and it does not collect data from anyone, including children.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>If this policy changes, the updated version will be published at this same address, with a new last-updated date at the top.</p>
+<h2>Your rights and control over your data</h2>
+<p>Because everything is stored only on your device, you are always in full control: you can view, edit, export, or delete your songs, playlists, and bands at any time inside the app. A deleted song is moved to the app's Trash, from which you can restore it; it remains in the app's local database — and in any library backup file you have saved — until you uninstall the app or clear its storage in Android settings, either of which permanently deletes everything.</p>
 
-  <h2>Contact</h2>
-  <p>For questions about this policy, contact: <code>support@gmail.com</code></p>
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published at this same address, with a new last-updated date at the top.</p>
+
+<h2>Contact</h2>
+<p>For questions about this policy, contact: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="sr-Latn" data-title="Fiddle — Politika privatnosti" hidden>
+<h1>Politika privatnosti</h1>
+<p class="meta">
+  <span>Aplikacija: Fiddle</span>
+  <span>Programer: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Poslednja izmena: 21. septembar 2026.</span>
+</p>
+
+<p class="lede">Fiddle ne prikuplja nikakve podatke o vama. Nema server, nema korisnički nalog, i ništa ne napušta vaš uređaj — osim tokom opcione, direktne veze sa uređajima vaših članova benda na istoj Wi-Fi mreži.</p>
+
+<h2>Sažetak</h2>
+<p>Fiddle je pesmarica sa akordima za muzičare: biblioteka pesama, transpozicija, kapo, dijagrami akorda, metronom, setliste, režim nastupa sa automatskim skrolovanjem i sesija uživo za usklađivanje članova benda. Aplikacija nema server, nema korisničke naloge i nema prijavu. Sama aplikacija nikada ne šalje nijedan mrežni zahtev ka internetu.</p>
+<p>Dodirom na link ka politici privatnosti, dugmad „Kontakt“ i „Prijavi sadržaj“, ili na link izvora sačuvan uz pesmu koju ste uvezli, otvara se vaš pregledač ili aplikacija za e-poštu; ono što te aplikacije rade uređeno je njihovim sopstvenim pravilima.</p>
+
+<h2>Koje podatke prikupljamo</h2>
+<p>Nikakve. Fiddle nema analitiku, telemetriju, reklamne SDK-ove ni prijavljivanje grešaka trećim stranama. Programer ne prima, ne vidi i ne čuva nikakve vaše podatke.</p>
+
+<h2>Gde se čuvaju vaši podaci</h2>
+<p>Sve se čuva isključivo lokalno na vašem uređaju, u lokalnoj bazi podataka: pesme (tekst i akordi), plejliste i setliste, bendovi sa imenima i instrumentima članova, podešavanja i beleške. Deinstalacija aplikacije briše sve ove podatke.</p>
+
+<h2>Dozvole i zašto su potrebne</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Ne koristi se za pristup internetu. Android traži ovu dozvolu za svaku mrežnu vezu, uključujući i vezu na lokalnoj Wi-Fi mreži, koja je jedina namena ove dozvole — funkcija Sesija uživo opisana ispod.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Mikrofon</span>
+    <p>Koristi se u dva dela aplikacije. Prvo, u štimeru: mikrofon sluša ton žice sve dok je ekran štimera otvoren, da bi izmerio visinu tona i pokazao da li je viša ili niža od željene. Kod bubnja štimer na isti način meri visinu tona posebno na svakom šrafu i pokazuje koji treba zategnuti ili opustiti da bi svi šrafovi bili ujednačeni. Drugo, tokom sesije uživo, kada vođa sesije pokrene merenje kašnjenja zvuka: aplikacija pušta niz kratkih tonova i meri kada ih mikrofon čuje, da bi metronom kliknuo u istom trenutku na svim telefonima. U oba slučaja zvuk se obrađuje odmah, u memoriji telefona, i nikada se ne snima kao fajl, ne čuva se i ne šalje nigde. Aplikacija traži ovu dozvolu tek pošto vam pokaže čemu služi — kada otvorite štimer, ili kada dodirnete "Dozvoli mikrofon" na ekranu Uživo — i možete je odbiti; sve ostalo u aplikaciji radi bez mikrofona. Mikrofon se prestaje koristiti čim napustite ekran štimera ili aplikacija ode u pozadinu.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Stanje mreže i multicast</span>
+    <p>Potrebne da bi uređaji članova benda pronašli jedan drugog na istoj Wi-Fi mreži (mDNS otkrivanje servisa, oglašeno kao <code>_fiddle-lan._tcp</code> preko TCP porta <code>47811</code>) i ostali povezani. Koriste se isključivo za Sesiju uživo, i ne daju pristup internetu.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Servis u prvom planu</span>
+    <p>Omogućava metronomu da nastavi da svira kada se ekran ugasi tokom nastupa. Dok metronom radi, Android prikazuje stalno obaveštenje „Metronom svira" sa kontrolom za zaustavljanje; uklanja se čim zaustavite klik.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Izmena audio podešavanja</span>
+    <p>Potrebno za reprodukciju metronoma i zvuka akorda.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibracija</span>
+    <p>Haptički odziv na dodir.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Pristup fajlovima — samo Android 12 i stariji</span>
+    <p>Deklariše ih biblioteka za rad sa fajlovima koju aplikacija koristi, ograničena na Android 12 i starije (<code>maxSdkVersion=32</code>). Fiddle sama od sebe ne pretražuje niti upisuje u vaš prostor za skladištenje: fajlove koje uvozite birate kroz sistemski birač fajlova, a izvezeni fajlovi se predaju sistemskom meniju za deljenje, gde sami birate gde idu.</p>
+  </div>
+</div>
+
+<h2>Sesija uživo — jedina mrežna funkcija</h2>
+<p>Članovi benda na istoj Wi-Fi mreži mogu direktno povezati svoje uređaje. Kada pokrenete sesiju, njen naziv se oglašava na lokalnoj mreži i vidljiv je svakom uređaju na toj mreži. Kada se pridružite, vođi sesije šaljete ime koje ste uneli i nasumični identifikator koji aplikacija generiše za vaš uređaj (nije hardverski ID niti ID naloga); vođa deli spisak članova sa svima u sesiji. Vođa šalje pesmu koja se trenutno svira i, ako je otvorena iz setliste, naziv i redosled setliste; pesme koje nemate — uključujući vođine lične beleške, YouTube link, ton, kapo i tempo za tu pesmu — kopiraju se na vaš uređaj, a pesme iz ostatka setliste mogu se kopirati unapred da bi se trenutno otvorile. Ovi podaci ne napuštaju lokalnu mrežu i ne prolaze kroz nijedan server. Veza je direktna i nije šifrovana niti zaštićena lozinkom, pa bilo ko na istoj mreži može da se pridruži sesiji ili je posmatra; koristite Sesiju uživo na Wi-Fi mreži kojoj verujete. Pesme primljene od vođe čuvaju se u vašoj biblioteci i ostaju tu i nakon što se sesija završi; obrišite ih kao svaku drugu pesmu ako ih ne želite. Sama setlista se ne čuva. Pridruživanje je dobrovoljno i traje samo dok držite sesiju otvorenom.</p>
+
+<h2>Uvoz pesama</h2>
+<p>Sami birate svoje fajlove (tekst, <code>ChordPro</code>, Word, Excel, CSV, ili <code>JSON</code> Fiddle biblioteke, koji se spaja sa vašom bibliotekom) kroz sistemski birač fajlova. Fajlovi se čitaju lokalno i nikada se ne šalju nigde.</p>
+
+<h2>Izvoz i deljenje</h2>
+<p>Pesmu možete izvesti kao PDF, običan tekst ili <code>ChordPro</code>, setlistu ili profil benda (uključujući imena i instrumente članova) kao <code>JSON</code> fajl, a celu biblioteku — uključujući beleške, omiljene i pesme iz Kanti — kao <code>JSON</code> rezervnu kopiju, sve kroz sistemski meni za deljenje. Odredište birate sami; aplikacija ne šalje ništa samoinicijativno.</p>
+
+<h2>Android rezervna kopija</h2>
+<p>Fiddle isključuje Android automatsku rezervnu kopiju podataka aplikacije, pa operativni sistem ne kopira podatke aplikacije na vaš Google nalog. Ako želite kopiju biblioteke, koristite „Sačuvaj kopiju biblioteke (JSON)" u aplikaciji.</p>
+
+<h2>Privremeni fajlovi</h2>
+<p>Izvezene ili podeljene kopije vaših pesama i biblioteke upisuju se u privatni keš aplikacije i zamenjuju se pri sledećem izvozu ili deljenju. Ako se baza podataka aplikacije ošteti, njena kopija sa datumom može biti sačuvana u privatnom folderu aplikacije radi oporavka. Sve ovo ostaje unutar privatnog skladišta aplikacije i uklanja se kada deinstalirate aplikaciju.</p>
+
+<h2>Deljenje sa trećim stranama</h2>
+<p>Ne delimo podatke ni sa kim, jer ih ne prikupljamo.</p>
+
+<h2>Bezbednost</h2>
+<p>Pošto svi podaci ostaju na vašem uređaju i ne šalju se nama, ne postoje vaši podaci na serveru koje bi trebalo štititi. Standardna Android izolacija aplikacija štiti vaše lokalne podatke kao i kod svake druge aplikacije na uređaju.</p>
+
+<h2>Deca</h2>
+<p>Fiddle nije namenjen deci mlađoj od 13 godina i ne prikuplja podatke ni od koga, uključujući decu.</p>
+
+<h2>Vaša prava i kontrola nad podacima</h2>
+<p>Pošto se sve čuva samo na vašem uređaju, potpuno ste u kontroli: u svakom trenutku možete pregledati, izmeniti, izvesti ili obrisati svoje pesme, plejliste i bendove unutar aplikacije. Obrisana pesma se premešta u Kantu aplikacije, odakle je možete vratiti; ostaje u lokalnoj bazi podataka aplikacije — i u svakom fajlu rezervne kopije biblioteke koji ste sačuvali — sve dok ne deinstalirate aplikaciju ili ne obrišete njeno skladište u Android podešavanjima, čime se trajno brišu svi podaci.</p>
+
+<h2>Izmene ove politike</h2>
+<p>Ako se ova politika izmeni, izmenjena verzija biće objavljena na istoj adresi, sa novim datumom poslednje izmene na vrhu.</p>
+
+<h2>Kontakt</h2>
+<p>Za pitanja o ovoj politici obratite se na: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="sr-Cyrl" data-title="Fiddle — Политика приватности" hidden>
+<h1>Политика приватности</h1>
+<p class="meta">
+  <span>Апликација: Fiddle</span>
+  <span>Програмер: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Последња измена: 21. септембар 2026.</span>
+</p>
+
+<p class="lede">Fiddle не прикупља никакве податке о вама. Нема сервер, нема кориснички налог, и ништа не напушта ваш уређај — осим током опционе, директне везе са уређајима ваших чланова бенда на истој Wi-Fi мрежи.</p>
+
+<h2>Сажетак</h2>
+<p>Fiddle је песмарица са акордима за музичаре: библиотека песама, транспозиција, капо, дијаграми акорда, метроном, сетлисте, режим наступа са аутоматским скроловањем и сесија уживо за усклађивање чланова бенда. Апликација нема сервер, нема корисничке налоге и нема пријаву. Сама апликација никада не шаље ниједан мрежни захтев ка интернету.</p>
+<p>Додиром на линк ка политици приватности, дугмад „Контакт“ и „Пријави садржај“, или на линк извора сачуван уз песму коју сте увезли, отвара се ваш прегледач или апликација за е-пошту; оно што те апликације раде уређено је њиховим сопственим правилима.</p>
+
+<h2>Које податке прикупљамо</h2>
+<p>Никакве. Fiddle нема аналитику, телеметрију, рекламне SDK-ove ни пријављивање грешака трећим странама. Програмер не прима, не види и не чува никакве ваше податке.</p>
+
+<h2>Где се чувају ваши подаци</h2>
+<p>Све се чува искључиво локално на вашем уређају, у локалној бази података: песме (текст и акорди), плејлисте и сетлисте, бендови са именима и инструментима чланова, подешавања и белешке. Деинсталација апликације брише све ове податке.</p>
+
+<h2>Дозволе и зашто су потребне</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Интернет</span>
+    <p>Не користи се за приступ интернету. Android тражи ову дозволу за сваку мрежну везу, укључујући и везу на локалној Wi-Fi мрежи, која је једина намена ове дозволе — функција Сесија уживо описана испод.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Микрофон</span>
+    <p>Користи се у два дела апликације. Прво, у штимеру: микрофон слуша тон жице све док је екран штимера отворен, да би измерио висину тона и показао да ли је виша или нижа од жељене. Код бубња штимер на исти начин мери висину тона посебно на сваком шрафу и показује који треба затегнути или опустити да би сви шрафови били уједначени. Друго, током сесије уживо, када вођа сесије покрене мерење кашњења звука: апликација пушта низ кратких тонова и мери када их микрофон чује, да би метроном кликнуо у истом тренутку на свим телефонима. У оба случаја звук се обрађује одмах, у меморији телефона, и никада се не снима као фајл, не чува се и не шаље нигде. Апликација тражи ову дозволу тек пошто вам покаже чему служи — када отворите штимер, или када додирнете "Дозволи микрофон" на екрану Уживо — и можете је одбити; све остало у апликацији ради без микрофона. Микрофон се престаје користити чим напустите екран штимера или апликација оде у позадину.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Стање мреже и мултицаст</span>
+    <p>Потребне да би уређаји чланова бенда пронашли један другог на истој Wi-Fi мрежи (mDNS откривање сервиса, оглашено као <code>_fiddle-lan._tcp</code> преко TCP порта <code>47811</code>) и остали повезани. Користе се искључиво за Сесију уживо, и не дају приступ интернету.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Сервис у првом плану</span>
+    <p>Омогућава метроному да настави да свира када се екран угаси током наступа. Док метроном ради, Android приказује стално обавештење „Метроном свира" са контролом за заустављање; уклања се чим зауставите клик.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Измена аудио подешавања</span>
+    <p>Потребно за репродукцију метронома и звука акорда.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Вибрација</span>
+    <p>Хаптички одзив на додир.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Приступ фајловима — само Android 12 и старији</span>
+    <p>Декларише их библиотека за рад са фајловима коју апликација користи, ограничена на Android 12 и старије (<code>maxSdkVersion=32</code>). Fiddle сама од себе не претражује нити уписује у ваш простор за складиштење: фајлове које увозите бирате кроз системски бирач фајлова, а извезени фајлови се предају системском менију за дељење, где сами бирате где иду.</p>
+  </div>
+</div>
+
+<h2>Сесија уживо — једина мрежна функција</h2>
+<p>Чланови бенда на истој Wi-Fi мрежи могу директно повезати своје уређаје. Када покренете сесију, њен назив се оглашава на локалној мрежи и видљив је сваком уређају на тој мрежи. Када се придружите, вођи сесије шаљете име које сте унели и насумични идентификатор који апликација генерише за ваш уређај (није хардверски ID нити ID налога); вођа дели списак чланова са свима у сесији. Вођа шаље песму која се тренутно свира и, ако је отворена из сетлисте, назив и редослед сетлисте; песме које немате — укључујући вођине личне белешке, YouTube линк, тон, капо и темпо за ту песму — копирају се на ваш уређај, а песме из остатка сетлисте могу се копирати унапред да би се тренутно отвориле. Ови подаци не напуштају локалну мрежу и не пролазе кроз ниједан сервер. Веза је директна и није шифрована нити заштићена лозинком, па било ко на истој мрежи може да се придружи сесији или је посматра; користите Сесију уживо на Wi-Fi мрежи којој верујете. Песме примљене од вође чувају се у вашој библиотеци и остају ту и након што се сесија заврши; обришите их као сваку другу песму ако их не желите. Сама сетлиста се не чува. Придруживање је добровољно и траје само док држите сесију отвореном.</p>
+
+<h2>Увоз песама</h2>
+<p>Сами бирате своје фајлове (текст, <code>ChordPro</code>, Word, Excel, CSV, или <code>JSON</code> Fiddle библиотеке, који се спаја са вашом библиотеком) кроз системски бирач фајлова. Фајлови се читају локално и никада се не шаљу нигде.</p>
+
+<h2>Извоз и дељење</h2>
+<p>Песму можете извести као PDF, обичан текст или <code>ChordPro</code>, сетлисту или профил бенда (укључујући имена и инструменте чланова) као <code>JSON</code> фајл, а целу библиотеку — укључујући белешке, омиљене и песме из Канти — као <code>JSON</code> резервну копију, све кроз системски мени за дељење. Одредиште бирате сами; апликација не шаље ништа самоиницијативно.</p>
+
+<h2>Android резервна копија</h2>
+<p>Fiddle искључује Android аутоматску резервну копију података апликације, па оперативни систем не копира податке апликације на ваш Google налог. Ако желите копију библиотеке, користите „Сачувај копију библиотеке (JSON)" у апликацији.</p>
+
+<h2>Привремени фајлови</h2>
+<p>Извезене или подељене копије ваших песама и библиотеке уписују се у приватни кеш апликације и замењују се при следећем извозу или дељењу. Ако се база података апликације оштети, њена копија са датумом може бити сачувана у приватном фолдеру апликације ради опоравка. Све ово остаје унутар приватног складишта апликације и уклања се када деинсталирате апликацију.</p>
+
+<h2>Дељење са трећим странама</h2>
+<p>Не делимо податке ни са ким, јер их не прикупљамо.</p>
+
+<h2>Безбедност</h2>
+<p>Пошто сви подаци остају на вашем уређају и не шаљу се нама, не постоје ваши подаци на серверу које би требало штитити. Стандардна Android изолација апликација штити ваше локалне податке као и код сваке друге апликације на уређају.</p>
+
+<h2>Деца</h2>
+<p>Fiddle није намењен деци млађој од 13 година и не прикупља податке ни од кога, укључујући децу.</p>
+
+<h2>Ваша права и контрола над подацима</h2>
+<p>Пошто се све чува само на вашем уређају, потпуно сте у контроли: у сваком тренутку можете прегледати, изменити, извести или обрисати своје песме, плејлисте и бендове унутар апликације. Обрисана песма се премешта у Канту апликације, одакле је можете вратити; остаје у локалној бази података апликације — и у сваком фајлу резервне копије библиотеке који сте сачували — све док не деинсталирате апликацију или не обришете њено складиште у Android подешавањима, чиме се трајно бришу сви подаци.</p>
+
+<h2>Измене ове политике</h2>
+<p>Ако се ова политика измени, измењена верзија биће објављена на истој адреси, са новим датумом последње измене на врху.</p>
+
+<h2>Контакт</h2>
+<p>За питања о овој политици обратите се на: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="de" data-title="Fiddle — Datenschutzerklärung" hidden>
+<h1>Datenschutzerklärung</h1>
+<p class="meta">
+  <span>App: Fiddle</span>
+  <span>Entwickler: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Zuletzt aktualisiert: 21. September 2026</span>
+</p>
+
+<p class="lede">Fiddle sammelt keine Daten über Sie. Es gibt keinen Server, kein Benutzerkonto, und nichts verlässt Ihr Gerät — außer während einer optionalen, direkten Verbindung zu den Geräten Ihrer Bandmitglieder im selben Wi-Fi-Netzwerk.</p>
+
+<h2>Zusammenfassung</h2>
+<p>Fiddle ist ein Akkordbuch für Musiker: eine Songbibliothek, Transposition, Kapodaster, Akkorddiagramme, ein Metronom, Setlisten, ein Auftrittsmodus mit automatischem Scrollen und eine Live-Session, um eine Band synchron zu halten. Die App hat keinen Backend-Server, keine Benutzerkonten und keinen Login. Die App selbst sendet niemals eine einzige Netzwerkanfrage ins Internet.</p>
+<p>Das Antippen des Links zur Datenschutzerklärung, der Schaltflächen „Kontakt" und „Inhalt melden" oder eines Quellenlinks, der bei einem importierten Song gespeichert ist, öffnet Ihren Browser oder Ihre E-Mail-App; was diese Apps tun, unterliegt deren eigenen Richtlinien.</p>
+
+<h2>Welche Daten wir erheben</h2>
+<p>Keine. Fiddle hat keine Analyse-Tools, keine Telemetrie, keine Werbe-SDKs und keine Absturzberichterstattung durch Dritte. Der Entwickler erhält, sieht oder speichert keine Ihrer Daten.</p>
+
+<h2>Wo Ihre Daten gespeichert werden</h2>
+<p>Alles wird lokal auf Ihrem Gerät gespeichert, in einer lokalen Datenbank: Ihre Songs (Text und Akkorde), Playlisten und Setlisten, Bands mit Namen und Instrumenten der Mitglieder, Einstellungen und Notizen. Das Deinstallieren der App löscht alles davon.</p>
+
+<h2>Berechtigungen und wofür sie benötigt werden</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Wird nicht für den Zugriff auf das Internet verwendet. Android verlangt diese Berechtigung für jede Netzwerkverbindung, einschließlich einer im lokalen Wi-Fi-Netzwerk — und dafür wird sie ausschließlich verwendet: für die unten beschriebene Funktion Live-Session.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Mikrofon</span>
+    <p>Wird in zwei Teilen der App verwendet. Erstens im Stimmgerät: Das Mikrofon hört einer gezupften Saite zu, solange der Stimmgerät-Bildschirm geöffnet ist, um die Tonhöhe zu messen und anzuzeigen, ob sie höher oder tiefer als das Ziel ist. Für Schlagzeug funktioniert das Stimmgerät genauso, misst aber die Tonhöhe an jeder Spannschraube einzeln und zeigt an, welche Spannschraube fester oder lockerer gedreht werden muss, damit sie gleichmäßig sind. Zweitens während einer Live-Session, wenn der Leiter eine Audio-Latenzmessung startet: Die App spielt eine Reihe kurzer Töne ab und misst, wann das Mikrofon sie hört, damit das Metronom auf jedem Telefon im selben Moment klickt. In beiden Fällen wird der Ton sofort im Speicher des Telefons verarbeitet und niemals in eine Datei aufgezeichnet, gespeichert oder irgendwohin gesendet. Die App fragt diese Berechtigung erst ab, nachdem sie Ihnen gezeigt hat, wofür sie benötigt wird — wenn Sie das Stimmgerät öffnen oder auf „Mikrofon erlauben" im Live-Bildschirm tippen — und Sie können sie ablehnen; alles andere in der App funktioniert ohne Mikrofon. Das Mikrofon wird nicht mehr verwendet, sobald Sie den Stimmgerät-Bildschirm verlassen oder die App in den Hintergrund wechselt.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Netzwerkstatus und Multicast</span>
+    <p>Erforderlich, damit die Geräte der Bandmitglieder sich im selben Wi-Fi-Netzwerk finden (mDNS-Diensterkennung, angekündigt als <code>_fiddle-lan._tcp</code> über TCP-Port <code>47811</code>) und verbunden bleiben können. Wird ausschließlich für die Live-Session verwendet und gewährt keinen Internetzugriff.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Dienst im Vordergrund</span>
+    <p>Sorgt dafür, dass das Metronom weiterläuft, wenn sich der Bildschirm während eines Auftritts ausschaltet. Während das Metronom läuft, zeigt Android eine dauerhafte Benachrichtigung „Metronom läuft" mit einer Stopp-Schaltfläche an; sie wird entfernt, sobald Sie den Klick stoppen.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Audioeinstellungen ändern</span>
+    <p>Erforderlich, um das Metronom und Akkordklänge abzuspielen.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibration</span>
+    <p>Haptisches Feedback bei Tippen.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Dateizugriff — nur Android 12 und älter</span>
+    <p>Wird von einer Dateibibliothek deklariert, die die App verwendet, beschränkt auf Android 12 und älter (<code>maxSdkVersion=32</code>). Fiddle durchsucht Ihren Speicher nicht von sich aus und schreibt nicht darauf: Dateien, die Sie importieren, wählen Sie über die System-Dateiauswahl aus, und Exporte werden an das System-Freigabemenü übergeben, in dem Sie das Ziel selbst wählen.</p>
+  </div>
+</div>
+
+<h2>Live-Session — die einzige Netzwerkfunktion</h2>
+<p>Bandmitglieder im selben Wi-Fi-Netzwerk können ihre Geräte direkt verbinden. Wenn Sie eine Session starten, wird ihr Name im lokalen Netzwerk angekündigt und ist für jedes Gerät in diesem Netzwerk sichtbar. Wenn Sie beitreten, senden Sie dem Leiter den von Ihnen eingegebenen Anzeigenamen und eine zufällige, von der App für Ihr Gerät generierte Kennung (keine Hardware- oder Konto-ID); der Leiter teilt die Mitgliederliste mit allen in der Session. Der Leiter sendet den gerade gespielten Song und, falls er aus einer Setliste geöffnet wurde, den Namen und die Reihenfolge der Setliste; Songs, die Sie nicht haben — einschließlich der persönlichen Notizen des Leiters, des YouTube-Links, der Tonart, des Kapodasters und des Tempos für diesen Song — werden auf Ihr Gerät kopiert, und Songs aus dem Rest der Setliste können im Voraus kopiert werden, damit sie sich sofort öffnen. Diese Daten verlassen niemals das lokale Netzwerk und laufen niemals über einen Server. Die Verbindung ist direkt und weder verschlüsselt noch passwortgeschützt, sodass jeder im selben Netzwerk einer Session beitreten oder sie beobachten könnte; nutzen Sie die Live-Session nur in einem Wi-Fi-Netzwerk, dem Sie vertrauen. Vom Leiter empfangene Songs werden in Ihrer Bibliothek gespeichert und bleiben dort, auch nachdem die Session endet; löschen Sie sie wie jeden anderen Song, falls Sie sie nicht behalten möchten. Die Setliste selbst wird nicht gespeichert. Der Beitritt ist freiwillig und dauert nur so lange, wie Sie die Session geöffnet halten.</p>
+
+<h2>Songs importieren</h2>
+<p>Sie wählen Ihre eigenen Dateien (Text, <code>ChordPro</code>, Word, Excel, CSV oder eine Fiddle-Bibliotheks-<code>JSON</code>-Datei, die mit Ihrer Bibliothek zusammengeführt wird) über die System-Dateiauswahl. Dateien werden lokal gelesen und niemals irgendwohin gesendet.</p>
+
+<h2>Export und Teilen</h2>
+<p>Sie können einen Song als PDF, einfachen Text oder <code>ChordPro</code>, eine Setliste oder ein Bandprofil (einschließlich Namen und Instrumente der Mitglieder) als <code>JSON</code>-Datei und Ihre gesamte Bibliothek — einschließlich Notizen, Favoriten und gelöschter Songs — als <code>JSON</code>-Sicherung exportieren, alles über das System-Freigabemenü. Sie wählen das Ziel; die App sendet niemals von sich aus etwas.</p>
+
+<h2>Android-Backup</h2>
+<p>Fiddle schließt sich von der automatischen App-Datensicherung von Android aus, sodass das Betriebssystem die App-Daten nicht auf Ihr Google-Konto kopiert. Wenn Sie eine Kopie Ihrer Bibliothek möchten, verwenden Sie „Bibliothekssicherung speichern (JSON)" in der App.</p>
+
+<h2>Temporäre Dateien</h2>
+<p>Exportierte oder geteilte Kopien Ihrer Songs und Bibliothek werden in den privaten Cache der App geschrieben und beim nächsten Export oder Teilen ersetzt. Falls die Datenbank der App beschädigt wird, kann eine datierte Kopie davon im privaten Ordner der App zur Wiederherstellung aufbewahrt werden. All dies bleibt innerhalb des privaten Speichers der App und wird entfernt, wenn Sie die App deinstallieren.</p>
+
+<h2>Weitergabe an Dritte</h2>
+<p>Wir geben keine Daten an Dritte weiter, weil wir keine erheben.</p>
+
+<h2>Sicherheit</h2>
+<p>Da alle Daten auf Ihrem Gerät verbleiben und keine an uns übertragen werden, gibt es keine Ihrer Daten auf einem Server zu schützen. Die standardmäßige Android-App-Sandbox schützt Ihre lokalen Daten wie bei jeder anderen App auf dem Gerät.</p>
+
+<h2>Kinder</h2>
+<p>Fiddle richtet sich nicht an Kinder unter 13 Jahren und erhebt von niemandem Daten, auch nicht von Kindern.</p>
+
+<h2>Ihre Rechte und Kontrolle über Ihre Daten</h2>
+<p>Da alles nur auf Ihrem Gerät gespeichert wird, haben Sie jederzeit die volle Kontrolle: Sie können Ihre Songs, Playlisten und Bands innerhalb der App jederzeit ansehen, bearbeiten, exportieren oder löschen. Ein gelöschter Song wird in den Papierkorb der App verschoben, aus dem Sie ihn wiederherstellen können; er bleibt in der lokalen Datenbank der App — und in jeder Bibliothekssicherungsdatei, die Sie gespeichert haben — bis Sie die App deinstallieren oder ihren Speicher in den Android-Einstellungen löschen, wodurch beides alles dauerhaft löscht.</p>
+
+<h2>Änderungen dieser Richtlinie</h2>
+<p>Sollte sich diese Richtlinie ändern, wird die aktualisierte Version an derselben Adresse veröffentlicht, mit einem neuen Datum der letzten Aktualisierung oben.</p>
+
+<h2>Kontakt</h2>
+<p>Bei Fragen zu dieser Richtlinie wenden Sie sich an: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="es" data-title="Fiddle — Política de privacidad" hidden>
+<h1>Política de privacidad</h1>
+<p class="meta">
+  <span>App: Fiddle</span>
+  <span>Desarrollador: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Última actualización: 21 de septiembre de 2026</span>
+</p>
+
+<p class="lede">Fiddle no recopila ningún dato sobre usted. No hay servidor, no hay cuenta, y nada sale de su dispositivo — salvo durante una conexión opcional y directa con los dispositivos de los miembros de su banda en la misma red Wi‑Fi.</p>
+
+<h2>Resumen</h2>
+<p>Fiddle es un cancionero de acordes para músicos: una biblioteca de canciones, transposición, capo, diagramas de acordes, un metrónomo, listas de repertorio, un modo de actuación con desplazamiento automático, y una sesión en vivo para mantener sincronizada a la banda. La app no tiene servidor, no tiene cuentas de usuario ni inicio de sesión. La app en sí nunca envía ninguna solicitud de red a internet.</p>
+<p>Al tocar el enlace a la política de privacidad, los botones "Contacto" e "Informar contenido", o un enlace de origen guardado junto con una canción que importó, se abre su navegador o su aplicación de correo electrónico; lo que hagan esas aplicaciones se rige por sus propias políticas.</p>
+
+<h2>Qué datos recopilamos</h2>
+<p>Ninguno. Fiddle no tiene análisis, ni telemetría, ni SDKs de publicidad, ni informes de fallos de terceros. El desarrollador no recibe, no ve ni almacena ninguno de sus datos.</p>
+
+<h2>Dónde viven sus datos</h2>
+<p>Todo se almacena localmente en su dispositivo, en una base de datos local: sus canciones (letras y acordes), listas de reproducción y de repertorio, bandas con nombres e instrumentos de sus integrantes, ajustes y notas. Desinstalar la app elimina todo esto.</p>
+
+<h2>Permisos y por qué son necesarios</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>No se usa para acceder a internet. Android exige este permiso para cualquier conexión de red, incluida una en una red Wi‑Fi local, que es el único uso que se le da — la función Sesión en vivo descrita más abajo.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Micrófono</span>
+    <p>Se usa en dos partes de la app. Primero, en el afinador: el micrófono escucha una cuerda pulsada mientras la pantalla del afinador esté abierta, para medir el tono y mostrar si está más alto o más bajo que el objetivo. Para tambores, el afinador funciona igual, pero mide el tono en cada tensora por separado y muestra cuál debe apretarse o aflojarse para igualarlos. Segundo, durante una sesión en vivo, cuando el líder inicia una medición de latencia de audio: la app reproduce una serie de tonos breves y mide cuándo los oye el micrófono, para que el metrónomo pueda hacer clic en el mismo instante en todos los teléfonos. En ambos casos el sonido se procesa de inmediato, en la memoria del teléfono, y nunca se graba en un archivo, ni se almacena, ni se envía a ningún sitio. La app solicita este permiso solo después de mostrarle para qué sirve — cuando abre el afinador, o cuando toca "Permitir el micrófono" en la pantalla En vivo — y puede rechazarlo; todo lo demás en la app funciona sin el micrófono. El micrófono deja de usarse en cuanto sale de la pantalla del afinador o la app pasa a segundo plano.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Estado de la red y multicast</span>
+    <p>Necesarios para que los dispositivos de los miembros de la banda puedan encontrarse entre sí en la misma red Wi‑Fi (descubrimiento de servicios mDNS, anunciado como <code>_fiddle-lan._tcp</code> por el puerto TCP <code>47811</code>) y permanecer conectados. Se usan únicamente para la Sesión en vivo, y no otorgan acceso a internet.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Servicio en primer plano</span>
+    <p>Mantiene el metrónomo sonando cuando la pantalla se apaga durante una actuación. Mientras el metrónomo funciona, Android muestra una notificación persistente "El metrónomo está sonando" con un control para detenerlo; se elimina en cuanto detiene el clic.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Modificar ajustes de audio</span>
+    <p>Necesario para reproducir el metrónomo y los sonidos de acordes.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibración</span>
+    <p>Retroalimentación háptica al tocar.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Acceso a archivos — solo Android 12 y anteriores</span>
+    <p>Declarados por una biblioteca de archivos que usa la app, limitados a Android 12 y anteriores (<code>maxSdkVersion=32</code>). Fiddle no explora ni escribe en su almacenamiento por su cuenta: los archivos que importa se eligen mediante el selector de archivos del sistema, y las exportaciones se entregan a la hoja de uso compartido del sistema, donde usted elige adónde van.</p>
+  </div>
+</div>
+
+<h2>Sesión en vivo — la única función de red</h2>
+<p>Los miembros de la banda en la misma red Wi‑Fi pueden conectar sus dispositivos directamente. Cuando inicia una sesión, su nombre se anuncia en la red local y es visible para todos los dispositivos de esa red. Cuando se une, envía al líder el nombre que escribió y un identificador aleatorio que la app genera para su dispositivo (no es un ID de hardware ni de cuenta); el líder comparte la lista de miembros con todos los de la sesión. El líder envía la canción que se está reproduciendo y, si se abrió desde una lista de repertorio, el nombre y el orden de esa lista; las canciones que usted no tiene — incluidas las notas personales del líder, el enlace de YouTube, la tonalidad, el capo y el tempo de esa canción — se copian a su dispositivo, y las canciones del resto de la lista de repertorio pueden copiarse por adelantado para que se abran al instante. Estos datos nunca salen de la red local ni pasan por ningún servidor. La conexión es directa y no está cifrada ni protegida con contraseña, por lo que cualquiera en la misma red podría unirse a una sesión u observarla; use la Sesión en vivo en una red Wi‑Fi de confianza. Las canciones recibidas del líder se guardan en su biblioteca y permanecen ahí después de que termine la sesión; elimínelas como cualquier otra canción si no las quiere. La lista de repertorio en sí no se guarda. Unirse es voluntario y dura solo mientras mantenga la sesión abierta.</p>
+
+<h2>Importar canciones</h2>
+<p>Usted elige sus propios archivos (texto, <code>ChordPro</code>, Word, Excel, CSV, o un <code>JSON</code> de biblioteca de Fiddle, que se combina con su biblioteca) mediante el selector de archivos del sistema. Los archivos se leen localmente y nunca se envían a ningún sitio.</p>
+
+<h2>Exportación y uso compartido</h2>
+<p>Puede exportar una canción como PDF, texto plano o <code>ChordPro</code>, una lista de repertorio o un perfil de banda (incluidos nombres e instrumentos de los integrantes) como archivo <code>JSON</code>, y toda su biblioteca — incluidas notas, favoritas y canciones en la papelera — como copia de seguridad <code>JSON</code>, todo mediante el menú de uso compartido del sistema. Usted elige el destino; la app nunca envía nada por su cuenta.</p>
+
+<h2>Copia de seguridad de Android</h2>
+<p>Fiddle está excluida de la copia de seguridad automática de datos de apps de Android, por lo que el sistema operativo no copia los datos de la app a su cuenta de Google. Si desea una copia de su biblioteca, use "Guardar copia de la biblioteca (JSON)" en la app.</p>
+
+<h2>Archivos temporales</h2>
+<p>Las copias exportadas o compartidas de sus canciones y su biblioteca se escriben en la caché privada de la app y se reemplazan la próxima vez que exporte o comparta. Si la base de datos de la app se daña, puede conservarse una copia fechada de ella en la carpeta privada de la app para su recuperación. Todo esto permanece dentro del almacenamiento privado de la app y se elimina al desinstalarla.</p>
+
+<h2>Compartir con terceros</h2>
+<p>No compartimos datos con nadie, porque no recopilamos ninguno.</p>
+
+<h2>Seguridad</h2>
+<p>Dado que todos sus datos permanecen en su dispositivo y ninguno se nos transmite, no hay datos suyos en ningún servidor que proteger. El aislamiento de apps estándar de Android protege sus datos locales igual que con cualquier otra app del dispositivo.</p>
+
+<h2>Menores</h2>
+<p>Fiddle no está dirigida a menores de 13 años, y no recopila datos de nadie, incluidos los menores.</p>
+
+<h2>Sus derechos y el control sobre sus datos</h2>
+<p>Como todo se almacena únicamente en su dispositivo, usted tiene siempre el control total: puede ver, editar, exportar o eliminar sus canciones, listas de reproducción y bandas en cualquier momento dentro de la app. Una canción eliminada se traslada a la Papelera de la app, desde donde puede restaurarla; permanece en la base de datos local de la app — y en cualquier archivo de copia de seguridad de la biblioteca que haya guardado — hasta que desinstale la app o borre su almacenamiento en los ajustes de Android, cualquiera de las dos acciones elimina todo de forma permanente.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si esta política cambia, la versión actualizada se publicará en esta misma dirección, con una nueva fecha de última actualización en la parte superior.</p>
+
+<h2>Contacto</h2>
+<p>Para preguntas sobre esta política, contacte: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="pt-BR" data-title="Fiddle — Política de Privacidade" hidden>
+<h1>Política de Privacidade</h1>
+<p class="meta">
+  <span>App: Fiddle</span>
+  <span>Desenvolvedor: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Última atualização: 21 de setembro de 2026</span>
+</p>
+
+<p class="lede">O Fiddle não coleta nenhum dado sobre você. Não há servidor, não há conta, e nada sai do seu dispositivo — exceto durante uma conexão opcional e direta com os dispositivos dos integrantes da sua banda na mesma rede Wi‑Fi.</p>
+
+<h2>Resumo</h2>
+<p>O Fiddle é um cifrário para músicos: uma biblioteca de músicas, transposição, capotraste, diagramas de acordes, um metrônomo, setlists, um modo de apresentação com rolagem automática, e uma sessão ao vivo para manter a banda sincronizada. O app não tem servidor, não tem contas de usuário nem login. O próprio app nunca envia nenhuma requisição de rede para a internet.</p>
+<p>Ao tocar no link da política de privacidade, nos botões "Contato" e "Denunciar conteúdo", ou em um link de origem salvo junto a uma música que você importou, seu navegador ou app de e-mail é aberto; o que esses apps fazem é regido por suas próprias políticas.</p>
+
+<h2>Quais dados coletamos</h2>
+<p>Nenhum. O Fiddle não tem análises, telemetria, SDKs de publicidade, nem relatórios de falhas de terceiros. O desenvolvedor não recebe, não vê nem armazena nenhum dos seus dados.</p>
+
+<h2>Onde seus dados ficam</h2>
+<p>Tudo é armazenado localmente no seu dispositivo, em um banco de dados local: suas músicas (letras e acordes), playlists e setlists, bandas com nomes e instrumentos dos integrantes, configurações e notas. Desinstalar o app apaga tudo isso.</p>
+
+<h2>Permissões e por que são necessárias</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Não é usada para acessar a internet. O Android exige essa permissão para qualquer conexão de rede, incluindo uma em uma rede Wi‑Fi local, que é o único uso dado a ela — o recurso Sessão ao Vivo descrito abaixo.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Microfone</span>
+    <p>Usado em duas partes do app. Primeiro, no afinador: o microfone escuta uma corda dedilhada enquanto a tela do afinador estiver aberta, para medir a afinação e mostrar se está mais aguda ou mais grave que o alvo. Para baterias, o afinador funciona da mesma forma, mas mede a afinação em cada tarraxa separadamente, e mostra qual precisa ser apertada ou afrouxada para deixá-las equilibradas. Segundo, durante uma sessão ao vivo, quando o líder inicia uma medição de latência de áudio: o app toca uma sequência de tons curtos e mede quando o microfone os ouve, para que o metrônomo possa clicar no mesmo instante em todos os celulares. Em ambos os casos o som é processado imediatamente, na memória do telefone, e nunca é gravado em um arquivo, armazenado ou enviado para lugar nenhum. O app pede essa permissão somente depois de mostrar para que ela serve — quando você abre o afinador, ou quando toca em "Permitir o microfone" na tela Ao Vivo — e você pode recusá-la; tudo o mais no app funciona sem o microfone. O microfone para de ser usado assim que você sai da tela do afinador ou o app vai para segundo plano.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Estado da rede e multicast</span>
+    <p>Necessárias para que os dispositivos dos integrantes da banda possam se encontrar na mesma rede Wi‑Fi (descoberta de serviço mDNS, anunciada como <code>_fiddle-lan._tcp</code> pela porta TCP <code>47811</code>) e permanecer conectados. Usadas exclusivamente para a Sessão ao Vivo, e não concedem acesso à internet.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Serviço em primeiro plano</span>
+    <p>Mantém o metrônomo tocando quando a tela desliga durante uma apresentação. Enquanto o metrônomo estiver rodando, o Android exibe uma notificação persistente "O metrônomo está tocando" com um controle para parar; ela é removida assim que você para o clique.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Modificar configurações de áudio</span>
+    <p>Necessária para reproduzir o metrônomo e os sons de acordes.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibração</span>
+    <p>Feedback tátil ao tocar na tela.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Acesso a arquivos — apenas Android 12 e anteriores</span>
+    <p>Declaradas por uma biblioteca de arquivos que o app usa, limitada ao Android 12 e versões anteriores (<code>maxSdkVersion=32</code>). O Fiddle não navega nem grava no seu armazenamento por conta própria: os arquivos que você importa são escolhidos pelo seletor de arquivos do sistema, e as exportações são entregues à folha de compartilhamento do sistema, onde você escolhe para onde vão.</p>
+  </div>
+</div>
+
+<h2>Sessão ao Vivo — o único recurso de rede</h2>
+<p>Integrantes da banda na mesma rede Wi‑Fi podem conectar seus dispositivos diretamente. Quando você inicia uma sessão, o nome dela é anunciado na rede local e fica visível para todos os dispositivos dessa rede. Ao entrar, você envia ao líder o nome de exibição que digitou e um identificador aleatório gerado pelo app para o seu dispositivo (não é um ID de hardware ou de conta); o líder compartilha a lista de integrantes com todos na sessão. O líder envia a música que está tocando no momento e, se ela foi aberta a partir de uma setlist, o nome e a ordem dessa setlist; músicas que você não tem — incluindo as notas pessoais do líder, o link do YouTube, o tom, o capotraste e o andamento daquela música — são copiadas para o seu dispositivo, e músicas do restante da setlist podem ser copiadas com antecedência para abrir instantaneamente. Esses dados nunca saem da rede local e nunca passam por nenhum servidor. A conexão é direta e não é criptografada nem protegida por senha, então qualquer pessoa na mesma rede poderia entrar em uma sessão ou observá-la; use a Sessão ao Vivo em uma rede Wi‑Fi de confiança. Músicas recebidas do líder são salvas na sua biblioteca e permanecem lá depois que a sessão termina; exclua-as como qualquer outra música se não as quiser. A setlist em si não é salva. Entrar é voluntário e dura apenas enquanto você mantiver a sessão aberta.</p>
+
+<h2>Importando músicas</h2>
+<p>Você escolhe seus próprios arquivos (texto, <code>ChordPro</code>, Word, Excel, CSV, ou um <code>JSON</code> de biblioteca do Fiddle, que é mesclado à sua biblioteca) pelo seletor de arquivos do sistema. Os arquivos são lidos localmente e nunca são enviados a lugar nenhum.</p>
+
+<h2>Exportação e compartilhamento</h2>
+<p>Você pode exportar uma música como PDF, texto simples ou <code>ChordPro</code>, uma setlist ou um perfil de banda (incluindo nomes e instrumentos dos integrantes) como um arquivo <code>JSON</code>, e toda a sua biblioteca — incluindo notas, favoritas e músicas na lixeira — como um backup <code>JSON</code>, tudo pelo menu de compartilhamento do sistema. Você escolhe o destino; o app nunca envia nada por conta própria.</p>
+
+<h2>Backup do Android</h2>
+<p>O Fiddle opta por não participar do backup automático de dados de apps do Android, então o sistema operacional não copia os dados do app para sua conta do Google. Se quiser uma cópia da sua biblioteca, use "Salvar backup da biblioteca (JSON)" no app.</p>
+
+<h2>Arquivos temporários</h2>
+<p>Cópias exportadas ou compartilhadas das suas músicas e biblioteca são gravadas no cache privado do app e são substituídas na próxima vez que você exportar ou compartilhar. Se o banco de dados do app for danificado, uma cópia dele com data pode ser mantida na pasta privada do app para recuperação. Tudo isso permanece dentro do armazenamento privado do app e é removido quando você desinstala o app.</p>
+
+<h2>Compartilhamento com terceiros</h2>
+<p>Não compartilhamos dados com ninguém, porque não coletamos nenhum.</p>
+
+<h2>Segurança</h2>
+<p>Como todos os dados permanecem no seu dispositivo e nenhum é transmitido para nós, não há dados seus em um servidor para proteger. O isolamento padrão de apps do Android protege seus dados locais como faz para qualquer outro app no dispositivo.</p>
+
+<h2>Crianças</h2>
+<p>O Fiddle não é direcionado a crianças menores de 13 anos, e não coleta dados de ninguém, incluindo crianças.</p>
+
+<h2>Seus direitos e o controle sobre seus dados</h2>
+<p>Como tudo é armazenado apenas no seu dispositivo, você está sempre no controle total: pode ver, editar, exportar ou excluir suas músicas, playlists e bandas a qualquer momento dentro do app. Uma música excluída é movida para a Lixeira do app, de onde você pode restaurá-la; ela permanece no banco de dados local do app — e em qualquer arquivo de backup da biblioteca que você tenha salvo — até você desinstalar o app ou limpar o armazenamento dele nas configurações do Android, qualquer uma das duas ações apaga tudo permanentemente.</p>
+
+<h2>Alterações nesta política</h2>
+<p>Se esta política mudar, a versão atualizada será publicada neste mesmo endereço, com uma nova data de última atualização no topo.</p>
+
+<h2>Contato</h2>
+<p>Para dúvidas sobre esta política, entre em contato: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="ru" data-title="Fiddle — Политика конфиденциальности" hidden>
+<h1>Политика конфиденциальности</h1>
+<p class="meta">
+  <span>Приложение: Fiddle</span>
+  <span>Разработчик: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Последнее обновление: 21 сентября 2026 г.</span>
+</p>
+
+<p class="lede">Fiddle не собирает никаких данных о вас. Нет сервера, нет учётной записи, и ничто не покидает ваше устройство — за исключением опционального прямого соединения с устройствами участников вашей группы в одной Wi‑Fi сети.</p>
+
+<h2>Краткое описание</h2>
+<p>Fiddle — это песенник для музыкантов: библиотека песен, транспонирование, каподастр, диаграммы аккордов, метроном, сетлисты, режим выступления с автопрокруткой и живая сессия для синхронизации группы. У приложения нет серверной части, учётных записей и входа в систему. Само приложение никогда не отправляет ни одного сетевого запроса в интернет.</p>
+<p>Нажатие на ссылку политики конфиденциальности, кнопки «Контакты» и «Сообщить о контенте», а также на ссылку источника, сохранённую вместе с импортированной песней, открывает ваш браузер или почтовое приложение; действия этих приложений регулируются их собственными правилами.</p>
+
+<h2>Какие данные мы собираем</h2>
+<p>Никакие. У Fiddle нет аналитики, телеметрии, рекламных SDK и сторонних систем отчётов о сбоях. Разработчик не получает, не видит и не хранит никаких ваших данных.</p>
+
+<h2>Где хранятся ваши данные</h2>
+<p>Всё хранится локально на вашем устройстве, в локальной базе данных: ваши песни (тексты и аккорды), плейлисты и сетлисты, группы с именами участников и их инструментами, настройки и заметки. Удаление приложения стирает всё это.</p>
+
+<h2>Разрешения и зачем они нужны</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Интернет</span>
+    <p>Не используется для выхода в интернет. Android требует это разрешение для любого сетевого соединения, включая соединение в локальной Wi‑Fi сети, — а это и есть единственное его назначение: функция «Живая сессия», описанная ниже.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Микрофон</span>
+    <p>Используется в двух частях приложения. Во-первых, в тюнере: микрофон слушает звук щипка струны, пока открыт экран тюнера, чтобы измерить высоту тона и показать, выше она или ниже нужной. Для барабанов тюнер работает так же, но измеряет высоту тона отдельно на каждой подтяжке и показывает, какую подтяжку нужно подтянуть или ослабить, чтобы выровнять звучание. Во-вторых, во время живой сессии, когда лидер начинает измерение задержки звука: приложение воспроизводит серию коротких тонов и измеряет, когда их услышит микрофон, чтобы метроном щёлкал в один и тот же момент на всех телефонах. В обоих случаях звук обрабатывается немедленно, в памяти телефона, и никогда не записывается в файл, не сохраняется и никуда не отправляется. Приложение запрашивает это разрешение только после того, как объяснит, для чего оно нужно, — когда вы открываете тюнер или нажимаете «Разрешить микрофон» на экране «Живая сессия», — и вы можете отказать; всё остальное в приложении работает без микрофона. Микрофон перестаёт использоваться, как только вы покидаете экран тюнера или приложение уходит в фон.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Состояние сети и multicast</span>
+    <p>Нужны, чтобы устройства участников группы могли находить друг друга в одной Wi‑Fi сети (обнаружение служб mDNS, объявляемое как <code>_fiddle-lan._tcp</code> через TCP-порт <code>47811</code>) и оставаться на связи. Используются исключительно для «Живой сессии» и не дают доступа в интернет.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Сервис на переднем плане</span>
+    <p>Позволяет метроному продолжать играть, когда экран гаснет во время выступления. Пока метроном работает, Android показывает постоянное уведомление «Метроном играет» с кнопкой остановки; оно исчезает, как только вы останавливаете щелчки.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Изменение настроек звука</span>
+    <p>Требуется для воспроизведения звуков метронома и аккордов.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Вибрация</span>
+    <p>Тактильный отклик на нажатия.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Доступ к файлам — только для Android 12 и старее</span>
+    <p>Объявлены библиотекой для работы с файлами, которую использует приложение, и ограничены Android 12 и более старыми версиями (<code>maxSdkVersion=32</code>). Fiddle самостоятельно не просматривает и не записывает данные в ваше хранилище: файлы, которые вы импортируете, выбираются через системный выбор файлов, а экспортированные файлы передаются в системное меню «Поделиться», где вы сами выбираете, куда их отправить.</p>
+  </div>
+</div>
+
+<h2>Живая сессия — единственная сетевая функция</h2>
+<p>Участники группы в одной Wi‑Fi сети могут напрямую соединить свои устройства. Когда вы начинаете сессию, её название объявляется в локальной сети и видно каждому устройству в этой сети. Когда вы присоединяетесь, вы отправляете лидеру введённое вами отображаемое имя и случайный идентификатор, сгенерированный приложением для вашего устройства (не аппаратный ID и не ID учётной записи); лидер делится списком участников со всеми в сессии. Лидер отправляет песню, которая сейчас воспроизводится, и, если она была открыта из сетлиста, — название и порядок сетлиста; песни, которых у вас нет, — включая личные заметки лидера, ссылку на YouTube, тональность, каподастр и темп для этой песни, — копируются на ваше устройство, а песни из остальной части сетлиста могут копироваться заранее, чтобы открываться мгновенно. Эти данные никогда не покидают локальную сеть и никогда не проходят через какой-либо сервер. Соединение прямое и не зашифровано и не защищено паролем, поэтому любой в той же сети может присоединиться к сессии или наблюдать за ней; используйте «Живую сессию» в Wi‑Fi сети, которой вы доверяете. Песни, полученные от лидера, сохраняются в вашей библиотеке и остаются там после завершения сессии; удалите их, как любую другую песню, если они вам не нужны. Сам сетлист не сохраняется. Присоединение добровольно и длится только пока вы держите сессию открытой.</p>
+
+<h2>Импорт песен</h2>
+<p>Вы сами выбираете файлы (текст, <code>ChordPro</code>, Word, Excel, CSV или <code>JSON</code> библиотеки Fiddle, который объединяется с вашей библиотекой) через системный выбор файлов. Файлы читаются локально и никогда никуда не отправляются.</p>
+
+<h2>Экспорт и обмен</h2>
+<p>Вы можете экспортировать песню в PDF, обычный текст или <code>ChordPro</code>, сетлист или профиль группы (включая имена участников и их инструменты) в виде файла <code>JSON</code>, а всю свою библиотеку — включая заметки, избранное и удалённые песни — в виде резервной копии <code>JSON</code>, всё через системное меню «Поделиться». Вы сами выбираете место назначения; приложение никогда ничего не отправляет самостоятельно.</p>
+
+<h2>Резервное копирование Android</h2>
+<p>Fiddle отключает автоматическое резервное копирование данных приложения средствами Android, поэтому операционная система не копирует данные приложения в вашу учётную запись Google. Если вы хотите сохранить копию своей библиотеки, используйте «Сохранить резервную копию библиотеки (JSON)» в приложении.</p>
+
+<h2>Временные файлы</h2>
+<p>Экспортированные или отправленные копии ваших песен и библиотеки записываются в закрытый кэш приложения и заменяются при следующем экспорте или отправке. Если база данных приложения повреждается, её датированная копия может храниться в закрытой папке приложения для восстановления. Всё это остаётся внутри закрытого хранилища приложения и удаляется при удалении приложения.</p>
+
+<h2>Передача третьим лицам</h2>
+<p>Мы не передаём данные никому, потому что мы их не собираем.</p>
+
+<h2>Безопасность</h2>
+<p>Поскольку все данные остаются на вашем устройстве и ничего не передаётся нам, на сервере нет ваших данных, которые нужно было бы защищать. Стандартная изоляция приложений Android защищает ваши локальные данные так же, как и у любого другого приложения на устройстве.</p>
+
+<h2>Дети</h2>
+<p>Fiddle не предназначен для детей младше 13 лет и не собирает данные ни от кого, включая детей.</p>
+
+<h2>Ваши права и контроль над своими данными</h2>
+<p>Поскольку всё хранится только на вашем устройстве, вы всегда полностью контролируете свои данные: в любой момент вы можете просматривать, редактировать, экспортировать или удалять свои песни, плейлисты и группы прямо в приложении. Удалённая песня перемещается в «Корзину» приложения, откуда её можно восстановить; она остаётся в локальной базе данных приложения — и в любом сохранённом вами файле резервной копии библиотеки — до тех пор, пока вы не удалите приложение или не очистите его хранилище в настройках Android; любое из этих действий безвозвратно удаляет все данные.</p>
+
+<h2>Изменения этой политики</h2>
+<p>Если эта политика изменится, обновлённая версия будет опубликована по тому же адресу с новой датой последнего обновления вверху страницы.</p>
+
+<h2>Контакты</h2>
+<p>По вопросам о данной политике обращайтесь: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="fr" data-title="Fiddle — Politique de confidentialité" hidden>
+<h1>Politique de confidentialité</h1>
+<p class="meta">
+  <span>Application : Fiddle</span>
+  <span>Développeur : Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Dernière mise à jour : 21 septembre 2026</span>
+</p>
+
+<p class="lede">Fiddle ne collecte aucune donnée vous concernant. Il n'y a ni serveur, ni compte, et rien ne quitte votre appareil — sauf lors d'une connexion facultative et directe avec les appareils des membres de votre groupe sur le même réseau Wi-Fi.</p>
+
+<h2>Résumé</h2>
+<p>Fiddle est un recueil d'accords pour musiciens : une bibliothèque de chansons, la transposition, le capodastre, des diagrammes d'accords, un métronome, des setlists, un mode scène avec défilement automatique, et une session en direct pour garder un groupe synchronisé. L'application n'a ni serveur backend, ni comptes utilisateurs, ni connexion. L'application elle-même n'envoie jamais la moindre requête réseau vers Internet.</p>
+<p>Appuyer sur le lien vers la politique de confidentialité, sur les boutons « Contact » et « Signaler le contenu », ou sur un lien source enregistré avec une chanson que vous avez importée, ouvre votre navigateur ou votre application de messagerie ; ce que font ces applications relève de leurs propres règles.</p>
+
+<h2>Quelles données nous collectons</h2>
+<p>Aucune. Fiddle n'a ni analyses, ni télémétrie, ni SDK publicitaire, ni rapport de plantage tiers. Le développeur ne reçoit, ne voit ni ne stocke aucune de vos données.</p>
+
+<h2>Où vivent vos données</h2>
+<p>Tout est stocké localement sur votre appareil, dans une base de données locale : vos chansons (paroles et accords), vos playlists et setlists, vos groupes avec les noms et instruments des membres, vos réglages et vos notes. Désinstaller l'application supprime tout cela.</p>
+
+<h2>Autorisations et pourquoi elles sont nécessaires</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Non utilisée pour accéder à Internet. Android exige cette autorisation pour toute connexion réseau, y compris sur un réseau Wi-Fi local, ce qui est sa seule utilisation — la fonctionnalité Session en direct décrite ci-dessous.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Microphone</span>
+    <p>Utilisé dans deux parties de l'application. D'abord, dans l'accordeur : le microphone écoute une corde pincée tant que l'écran de l'accordeur est ouvert, afin de mesurer la hauteur du son et d'indiquer si elle est plus haute ou plus basse que la cible. Pour les percussions, l'accordeur fonctionne de la même manière mais mesure la hauteur à chaque tirant séparément, et indique lequel doit être resserré ou desserré pour les uniformiser. Ensuite, pendant une session en direct, lorsque le leader démarre une mesure de la latence audio : l'application joue une série de sons courts et mesure quand le microphone les entend, afin que le métronome clique au même instant sur chaque téléphone. Dans les deux cas, le son est traité immédiatement, dans la mémoire du téléphone, et n'est jamais enregistré dans un fichier, stocké, ni envoyé où que ce soit. L'application ne demande cette autorisation qu'après vous avoir montré à quoi elle sert — lorsque vous ouvrez l'accordeur, ou lorsque vous appuyez sur « Autoriser le micro » sur l'écran En direct — et vous pouvez la refuser ; tout le reste de l'application fonctionne sans le microphone. Le microphone cesse d'être utilisé dès que vous quittez l'écran de l'accordeur ou que l'application passe en arrière-plan.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">État du réseau et multidiffusion</span>
+    <p>Nécessaires pour que les appareils des membres du groupe puissent se trouver sur le même réseau Wi-Fi (découverte de service mDNS, annoncée sous le nom <code>_fiddle-lan._tcp</code> via le port TCP <code>47811</code>) et rester connectés. Utilisées uniquement pour la Session en direct, et elles n'accordent aucun accès à Internet.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Service au premier plan</span>
+    <p>Permet au métronome de continuer à jouer lorsque l'écran s'éteint pendant une prestation. Pendant que le métronome fonctionne, Android affiche une notification persistante « Le métronome joue » avec un contrôle d'arrêt ; elle est supprimée dès que vous arrêtez le clic.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Modifier les réglages audio</span>
+    <p>Nécessaire pour jouer le métronome et les sons d'accords.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibration</span>
+    <p>Retour haptique lors des appuis.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Accès aux fichiers — Android 12 et versions antérieures uniquement</span>
+    <p>Déclarée par une bibliothèque de fichiers utilisée par l'application, limitée à Android 12 et versions antérieures (<code>maxSdkVersion=32</code>). Fiddle ne parcourt ni n'écrit dans votre stockage de sa propre initiative : les fichiers que vous importez sont choisis via le sélecteur de fichiers du système, et les exports sont remis au menu de partage du système, où vous choisissez leur destination.</p>
+  </div>
+</div>
+
+<h2>Session en direct — la seule fonctionnalité réseau</h2>
+<p>Les membres d'un groupe sur le même réseau Wi-Fi peuvent connecter directement leurs appareils. Lorsque vous démarrez une session, son nom est annoncé sur le réseau local et visible par tout appareil sur ce réseau. Lorsque vous rejoignez une session, vous envoyez au leader le nom d'affichage que vous avez saisi et un identifiant aléatoire généré par l'application pour votre appareil (et non un identifiant matériel ou de compte) ; le leader partage la liste des membres avec tous les participants de la session. Le leader envoie la chanson en cours de lecture et, si elle a été ouverte depuis une setlist, le nom et l'ordre de la setlist ; les chansons que vous n'avez pas — y compris les notes personnelles du leader, le lien YouTube, la tonalité, le capodastre et le tempo pour cette chanson — sont copiées sur votre appareil, et les chansons du reste de la setlist peuvent être copiées à l'avance pour s'ouvrir instantanément. Ces données ne quittent jamais le réseau local et ne transitent jamais par un serveur. La connexion est directe et n'est ni chiffrée ni protégée par mot de passe, de sorte que quiconque sur le même réseau pourrait rejoindre ou observer une session ; utilisez la Session en direct sur un réseau Wi-Fi auquel vous faites confiance. Les chansons reçues du leader sont enregistrées dans votre bibliothèque et y restent après la fin de la session ; supprimez-les comme toute autre chanson si vous ne souhaitez pas les conserver. La setlist elle-même n'est pas enregistrée. Rejoindre une session est volontaire et ne dure que tant que vous gardez la session ouverte.</p>
+
+<h2>Importer des chansons</h2>
+<p>Vous choisissez vos propres fichiers (texte, <code>ChordPro</code>, Word, Excel, CSV, ou un <code>JSON</code> de bibliothèque Fiddle, qui est fusionné avec votre bibliothèque) via le sélecteur de fichiers du système. Les fichiers sont lus localement et ne sont jamais envoyés où que ce soit.</p>
+
+<h2>Export et partage</h2>
+<p>Vous pouvez exporter une chanson en PDF, en texte brut ou en <code>ChordPro</code>, une setlist ou un profil de groupe (y compris les noms et instruments des membres) en fichier <code>JSON</code>, et toute votre bibliothèque — y compris les notes, les favoris et les chansons dans la corbeille — en sauvegarde <code>JSON</code>, le tout via le menu de partage du système. Vous choisissez la destination ; l'application n'envoie jamais rien de sa propre initiative.</p>
+
+<h2>Sauvegarde Android</h2>
+<p>Fiddle se désactive de la sauvegarde automatique des données d'application d'Android, de sorte que le système d'exploitation ne copie pas les données de l'application sur votre compte Google. Si vous souhaitez une copie de votre bibliothèque, utilisez « Enregistrer une sauvegarde de la bibliothèque (JSON) » dans l'application.</p>
+
+<h2>Fichiers temporaires</h2>
+<p>Les copies exportées ou partagées de vos chansons et de votre bibliothèque sont écrites dans le cache privé de l'application et sont remplacées lors du prochain export ou partage. Si la base de données de l'application est endommagée, une copie datée peut en être conservée dans le dossier privé de l'application à des fins de récupération. Tout ceci reste à l'intérieur du stockage privé de l'application et est supprimé lorsque vous désinstallez l'application.</p>
+
+<h2>Partage avec des tiers</h2>
+<p>Nous ne partageons de données avec personne, car nous n'en collectons aucune.</p>
+
+<h2>Sécurité</h2>
+<p>Comme toutes les données restent sur votre appareil et qu'aucune ne nous est transmise, il n'existe aucune de vos données sur un serveur à protéger. L'isolation applicative standard d'Android protège vos données locales comme pour toute autre application sur l'appareil.</p>
+
+<h2>Enfants</h2>
+<p>Fiddle ne s'adresse pas aux enfants de moins de 13 ans, et ne collecte de données auprès de personne, y compris auprès des enfants.</p>
+
+<h2>Vos droits et le contrôle de vos données</h2>
+<p>Comme tout est stocké uniquement sur votre appareil, vous gardez à tout moment le plein contrôle : vous pouvez consulter, modifier, exporter ou supprimer vos chansons, playlists et groupes à tout moment dans l'application. Une chanson supprimée est déplacée vers la Corbeille de l'application, d'où vous pouvez la restaurer ; elle reste dans la base de données locale de l'application — et dans tout fichier de sauvegarde de bibliothèque que vous avez enregistré — jusqu'à ce que vous désinstalliez l'application ou effaciez son stockage dans les réglages Android, l'un ou l'autre supprimant définitivement tout.</p>
+
+<h2>Modifications de cette politique</h2>
+<p>Si cette politique change, la version mise à jour sera publiée à cette même adresse, avec une nouvelle date de dernière mise à jour en haut de page.</p>
+
+<h2>Contact</h2>
+<p>Pour toute question concernant cette politique, contactez : <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="it" data-title="Fiddle — Informativa sulla privacy" hidden>
+<h1>Informativa sulla privacy</h1>
+<p class="meta">
+  <span>App: Fiddle</span>
+  <span>Sviluppatore: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Ultimo aggiornamento: 21 settembre 2026</span>
+</p>
+
+<p class="lede">Fiddle non raccoglie alcun dato su di te. Non esiste un server, non esiste un account e nulla lascia il tuo dispositivo — tranne durante una connessione opzionale e diretta con i dispositivi dei membri della tua band sulla stessa rete Wi-Fi.</p>
+
+<h2>Riepilogo</h2>
+<p>Fiddle è un canzoniere con accordi per musicisti: una libreria di brani, trasposizione, capotasto, diagrammi degli accordi, un metronomo, scalette (setlist), una modalità esibizione con scorrimento automatico e una sessione live per tenere sincronizzata una band. L'app non ha un server di backend, non ha account utente e non richiede l'accesso. L'app stessa non invia mai alcuna richiesta di rete a Internet.</p>
+<p>Toccando il link all'informativa sulla privacy, i pulsanti "Contatto" e "Segnala contenuto", oppure un link alla fonte salvato con un brano importato, si apre il tuo browser o la tua app di posta elettronica; ciò che queste app fanno è regolato dalle loro proprie norme.</p>
+
+<h2>Quali dati raccogliamo</h2>
+<p>Nessuno. Fiddle non ha analytics, non ha telemetria, non ha SDK pubblicitari e non ha segnalazione di arresti anomali da parte di terzi. Lo sviluppatore non riceve, non vede e non conserva nessuno dei tuoi dati.</p>
+
+<h2>Dove risiedono i tuoi dati</h2>
+<p>Tutto viene memorizzato localmente sul tuo dispositivo, in un database locale: i tuoi brani (testi e accordi), playlist e scalette, band con nomi e strumenti dei membri, impostazioni e note. Disinstallare l'app elimina tutto questo.</p>
+
+<h2>Permessi e perché sono necessari</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Non utilizzato per accedere a Internet. Android richiede questo permesso per qualsiasi connessione di rete, inclusa una su una rete Wi-Fi locale, che è l'unico uso che ne viene fatto — la funzione Sessione live descritta di seguito.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Microfono</span>
+    <p>Usato in due parti dell'app. Primo, nell'accordatore: il microfono ascolta una corda pizzicata per tutto il tempo in cui la schermata dell'accordatore è aperta, per misurare l'altezza del suono e mostrare se è più alta o più bassa rispetto all'obiettivo. Per la batteria, l'accordatore funziona allo stesso modo ma misura l'altezza a ciascun tirante separatamente, e mostra quale tirante deve essere stretto o allentato per renderli uniformi. Secondo, durante una sessione live, quando il leader avvia una misurazione della latenza audio: l'app riproduce una serie di brevi toni e misura quando il microfono li sente, in modo che il metronomo possa fare click nello stesso istante su ogni telefono. In entrambi i casi il suono viene elaborato immediatamente, nella memoria del telefono, e non viene mai registrato in un file, salvato o inviato da nessuna parte. L'app richiede questo permesso solo dopo averti mostrato a cosa serve — quando apri l'accordatore, o quando tocchi "Consenti il microfono" nella schermata Live — e puoi rifiutarlo; tutto il resto dell'app funziona senza il microfono. Il microfono smette di essere usato non appena lasci la schermata dell'accordatore o l'app va in background.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Stato della rete e multicast</span>
+    <p>Necessari affinché i dispositivi dei membri della band possano trovarsi a vicenda sulla stessa rete Wi-Fi (individuazione di servizi mDNS, pubblicizzata come <code>_fiddle-lan._tcp</code> sulla porta TCP <code>47811</code>) e restare connessi. Usati esclusivamente per la Sessione live, e non concedono alcun accesso a Internet.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Servizio in primo piano</span>
+    <p>Mantiene il metronomo in esecuzione quando lo schermo si spegne durante un'esibizione. Mentre il metronomo è in funzione, Android mostra una notifica persistente "Il metronomo è in esecuzione" con un comando di arresto; viene rimossa non appena fermi il click.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Modifica delle impostazioni audio</span>
+    <p>Necessario per riprodurre il metronomo e i suoni degli accordi.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Vibrazione</span>
+    <p>Feedback aptico al tocco.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Accesso ai file — solo Android 12 e versioni precedenti</span>
+    <p>Dichiarati da una libreria per file usata dall'app, limitati ad Android 12 e versioni precedenti (<code>maxSdkVersion=32</code>). Fiddle non sfoglia né scrive nella tua memoria di propria iniziativa: i file che importi vengono scelti tramite il selettore di file di sistema, e le esportazioni vengono consegnate al menu di condivisione di sistema, dove scegli tu dove farle andare.</p>
+  </div>
+</div>
+
+<h2>Sessione live — l'unica funzione di rete</h2>
+<p>I membri della band sulla stessa rete Wi-Fi possono collegare direttamente i propri dispositivi. Quando avvii una sessione, il suo nome viene annunciato sulla rete locale ed è visibile a ogni dispositivo su quella rete. Quando ti unisci, invii al leader il nome visualizzato che hai digitato e un identificatore casuale generato dall'app per il tuo dispositivo (non un ID hardware o dell'account); il leader condivide l'elenco dei membri con tutti quelli nella sessione. Il leader invia il brano attualmente in riproduzione e, se è stato aperto da una scaletta, il nome e l'ordine della scaletta; i brani che non hai — comprese le note personali del leader, il link YouTube, la tonalità, il capotasto e il tempo per quel brano — vengono copiati sul tuo dispositivo, e i brani del resto della scaletta possono essere copiati in anticipo così da aprirsi istantaneamente. Questi dati non lasciano mai la rete locale e non passano mai attraverso alcun server. La connessione è diretta e non è cifrata né protetta da password, quindi chiunque sulla stessa rete potrebbe unirsi o osservare una sessione; usa la Sessione live su una rete Wi-Fi di cui ti fidi. I brani ricevuti dal leader vengono salvati nella tua libreria e vi restano dopo la fine della sessione; eliminali come qualsiasi altro brano se non vuoi tenerli. La scaletta in sé non viene salvata. L'adesione è volontaria e dura solo finché mantieni la sessione aperta.</p>
+
+<h2>Importazione di brani</h2>
+<p>Scegli i tuoi file (testo, <code>ChordPro</code>, Word, Excel, CSV, o un <code>JSON</code> di libreria Fiddle, che viene unito alla tua libreria) tramite il selettore di file di sistema. I file vengono letti localmente e non vengono mai inviati da nessuna parte.</p>
+
+<h2>Esportazione e condivisione</h2>
+<p>Puoi esportare un brano come PDF, testo semplice o <code>ChordPro</code>, una scaletta o un profilo band (compresi nomi e strumenti dei membri) come file <code>JSON</code>, e l'intera libreria — comprese note, preferiti e brani nel cestino — come backup <code>JSON</code>, tutto tramite il menu di condivisione di sistema. Scegli tu la destinazione; l'app non invia mai nulla di propria iniziativa.</p>
+
+<h2>Backup Android</h2>
+<p>Fiddle si esclude dal backup automatico dei dati delle app di Android, quindi il sistema operativo non copia i dati dell'app sul tuo account Google. Se vuoi una copia della tua libreria, usa "Salva il backup della libreria (JSON)" nell'app.</p>
+
+<h2>File temporanei</h2>
+<p>Le copie esportate o condivise dei tuoi brani e della tua libreria vengono scritte nella cache privata dell'app e vengono sostituite alla successiva esportazione o condivisione. Se il database dell'app si danneggia, una copia datata di esso potrebbe essere conservata nella cartella privata dell'app per il ripristino. Tutto questo resta all'interno della memoria privata dell'app e viene rimosso quando disinstalli l'app.</p>
+
+<h2>Condivisione con terze parti</h2>
+<p>Non condividiamo dati con nessuno, perché non ne raccogliamo nessuno.</p>
+
+<h2>Sicurezza</h2>
+<p>Dato che tutti i dati restano sul tuo dispositivo e nessuno viene trasmesso a noi, non esistono tuoi dati su un server da proteggere. Il sandboxing standard delle app Android protegge i tuoi dati locali come avviene per qualsiasi altra app sul dispositivo.</p>
+
+<h2>Minori</h2>
+<p>Fiddle non è rivolta a minori di 13 anni, e non raccoglie dati da nessuno, inclusi i minori.</p>
+
+<h2>I tuoi diritti e il controllo sui tuoi dati</h2>
+<p>Poiché tutto viene memorizzato solo sul tuo dispositivo, hai sempre il pieno controllo: puoi visualizzare, modificare, esportare o eliminare i tuoi brani, playlist e band in qualsiasi momento all'interno dell'app. Un brano eliminato viene spostato nel Cestino dell'app, da cui puoi ripristinarlo; resta nel database locale dell'app — e in qualsiasi file di backup della libreria che hai salvato — finché non disinstalli l'app o cancelli la sua memoria nelle impostazioni Android, azioni che eliminano tutto in modo permanente.</p>
+
+<h2>Modifiche a questa informativa</h2>
+<p>Se questa informativa cambia, la versione aggiornata sarà pubblicata a questo stesso indirizzo, con una nuova data di ultimo aggiornamento in alto.</p>
+
+<h2>Contatto</h2>
+<p>Per domande su questa informativa, contatta: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="pl" data-title="Fiddle — Polityka prywatności" hidden>
+<h1>Polityka prywatności</h1>
+<p class="meta">
+  <span>Aplikacja: Fiddle</span>
+  <span>Deweloper: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Ostatnia aktualizacja: 21 września 2026 r.</span>
+</p>
+
+<p class="lede">Fiddle nie zbiera żadnych danych o Państwu. Nie ma serwera, nie ma konta i nic nie opuszcza Państwa urządzenia — z wyjątkiem opcjonalnego, bezpośredniego połączenia z urządzeniami członków Państwa zespołu w tej samej sieci Wi‑Fi.</p>
+
+<h2>Podsumowanie</h2>
+<p>Fiddle to śpiewnik z akordami dla muzyków: biblioteka utworów, transpozycja, kapodaster, diagramy akordów, metronom, setlisty, tryb występu z automatycznym przewijaniem oraz sesja na żywo pozwalająca zsynchronizować zespół. Aplikacja nie ma serwera, nie wymaga kont użytkowników ani logowania. Sama aplikacja nigdy nie wysyła żadnego żądania sieciowego do internetu.</p>
+<p>Dotknięcie linku do polityki prywatności, przycisków „Kontakt" i „Zgłoś treść" lub linku źródłowego zapisanego przy zaimportowanym utworze otwiera przeglądarkę lub aplikację pocztową; to, co robią te aplikacje, podlega ich własnym politykom.</p>
+
+<h2>Jakie dane zbieramy</h2>
+<p>Żadne. Fiddle nie posiada analityki, telemetrii, reklamowych SDK ani zewnętrznego zgłaszania awarii. Deweloper nie otrzymuje, nie widzi i nie przechowuje żadnych Państwa danych.</p>
+
+<h2>Gdzie znajdują się Państwa dane</h2>
+<p>Wszystko jest przechowywane lokalnie na Państwa urządzeniu, w lokalnej bazie danych: utwory (teksty i akordy), playlisty i setlisty, zespoły z nazwiskami i instrumentami członków, ustawienia oraz notatki. Odinstalowanie aplikacji usuwa wszystkie te dane.</p>
+
+<h2>Uprawnienia i ich przeznaczenie</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Nie jest wykorzystywane do łączenia się z internetem. Android wymaga tego uprawnienia dla każdego połączenia sieciowego, w tym w lokalnej sieci Wi‑Fi, co jest jego jedynym zastosowaniem — funkcja Sesji na żywo opisana poniżej.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Mikrofon</span>
+    <p>Wykorzystywane w dwóch częściach aplikacji. Po pierwsze, w tunerze: mikrofon nasłuchuje dźwięku szarpniętej struny przez cały czas, gdy otwarty jest ekran tunera, aby zmierzyć wysokość dźwięku i pokazać, czy jest wyższa czy niższa od docelowej. W przypadku perkusji tuner działa tak samo, ale mierzy wysokość dźwięku osobno dla każdej śruby i pokazuje, którą śrubę trzeba dokręcić lub poluzować, aby je wyrównać. Po drugie, podczas sesji na żywo, gdy prowadzący rozpoczyna pomiar opóźnienia dźwięku: aplikacja odtwarza serię krótkich dźwięków i mierzy, kiedy usłyszy je mikrofon, aby metronom klikał w tym samym momencie na wszystkich telefonach. W obu przypadkach dźwięk jest przetwarzany natychmiast, w pamięci telefonu, i nigdy nie jest zapisywany do pliku, przechowywany ani nigdzie wysyłany. Aplikacja prosi o to uprawnienie dopiero po pokazaniu, do czego jest potrzebne — gdy otworzą Państwo tuner lub dotkną „Zezwól na mikrofon" na ekranie sesji na żywo — i można je odrzucić; wszystko inne w aplikacji działa bez mikrofonu. Mikrofon przestaje być używany, gdy tylko opuszczą Państwo ekran tunera lub aplikacja przejdzie w tło.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Stan sieci i multicast</span>
+    <p>Potrzebne, aby urządzenia członków zespołu mogły się odnaleźć w tej samej sieci Wi‑Fi (wykrywanie usług mDNS, ogłaszane jako <code>_fiddle-lan._tcp</code> na porcie TCP <code>47811</code>) i pozostać połączone. Wykorzystywane wyłącznie na potrzeby Sesji na żywo i nie dają dostępu do internetu.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Usługa pierwszoplanowa</span>
+    <p>Umożliwia dalsze działanie metronomu, gdy ekran gaśnie podczas występu. Gdy metronom działa, Android wyświetla stałe powiadomienie „Metronom gra" z przyciskiem zatrzymania; jest ono usuwane, gdy tylko zatrzymają Państwo klikanie.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Zmiana ustawień dźwięku</span>
+    <p>Wymagane do odtwarzania dźwięków metronomu i akordów.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Wibracje</span>
+    <p>Wibracje zwrotne przy dotknięciach.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Dostęp do plików — tylko Android 12 i starsze</span>
+    <p>Zadeklarowane przez bibliotekę plików, z której korzysta aplikacja, ograniczone do Androida 12 i starszych wersji (<code>maxSdkVersion=32</code>). Fiddle samodzielnie nie przegląda ani nie zapisuje danych w pamięci urządzenia: importowane pliki wybierane są przez systemowy selektor plików, a eksportowane pliki przekazywane są do systemowego menu udostępniania, gdzie sami Państwo wybierają miejsce docelowe.</p>
+  </div>
+</div>
+
+<h2>Sesja na żywo — jedyna funkcja sieciowa</h2>
+<p>Członkowie zespołu w tej samej sieci Wi‑Fi mogą bezpośrednio połączyć swoje urządzenia. Gdy rozpoczynają Państwo sesję, jej nazwa jest ogłaszana w sieci lokalnej i widoczna dla każdego urządzenia w tej sieci. Dołączając do sesji, wysyłają Państwo prowadzącemu wpisaną nazwę wyświetlaną oraz losowy identyfikator wygenerowany przez aplikację dla Państwa urządzenia (nie jest to identyfikator sprzętowy ani konta); prowadzący udostępnia listę uczestników wszystkim w sesji. Prowadzący wysyła utwór aktualnie odtwarzany oraz, jeśli został otwarty z setlisty, nazwę i kolejność setlisty; utwory, których Państwo nie posiadają — w tym osobiste notatki prowadzącego, link do YouTube, tonację, kapodaster i tempo dla danego utworu — są kopiowane na Państwa urządzenie, a utwory z pozostałej części setlisty mogą być kopiowane z wyprzedzeniem, aby otwierały się natychmiast. Te dane nigdy nie opuszczają sieci lokalnej i nigdy nie przechodzą przez żaden serwer. Połączenie jest bezpośrednie i nie jest szyfrowane ani chronione hasłem, więc każdy w tej samej sieci mógłby dołączyć do sesji lub ją obserwować; proszę korzystać z Sesji na żywo w zaufanej sieci Wi‑Fi. Utwory otrzymane od prowadzącego są zapisywane w Państwa bibliotece i pozostają w niej po zakończeniu sesji; można je usunąć tak jak każdy inny utwór, jeśli nie są potrzebne. Sama setlista nie jest zapisywana. Dołączenie jest dobrowolne i trwa tylko tak długo, jak długo sesja pozostaje otwarta.</p>
+
+<h2>Importowanie utworów</h2>
+<p>Wybierają Państwo własne pliki (tekst, <code>ChordPro</code>, Word, Excel, CSV lub bibliotekę Fiddle w formacie <code>JSON</code>, która zostaje scalona z Państwa biblioteką) za pomocą systemowego selektora plików. Pliki są odczytywane lokalnie i nigdy nigdzie nie są wysyłane.</p>
+
+<h2>Eksport i udostępnianie</h2>
+<p>Mogą Państwo wyeksportować utwór jako PDF, zwykły tekst lub <code>ChordPro</code>, setlistę lub profil zespołu (w tym nazwiska i instrumenty członków) jako plik <code>JSON</code>, a całą bibliotekę — w tym notatki, ulubione i usunięte utwory — jako kopię zapasową <code>JSON</code>, wszystko poprzez systemowe menu udostępniania. Miejsce docelowe wybierają Państwo samodzielnie; aplikacja nigdy nie wysyła niczego z własnej inicjatywy.</p>
+
+<h2>Kopia zapasowa systemu Android</h2>
+<p>Fiddle rezygnuje z automatycznej kopii zapasowej danych aplikacji w systemie Android, dzięki czemu system operacyjny nie kopiuje danych aplikacji na Państwa konto Google. Aby uzyskać kopię swojej biblioteki, należy użyć opcji „Zapisz kopię zapasową biblioteki (JSON)" w aplikacji.</p>
+
+<h2>Pliki tymczasowe</h2>
+<p>Wyeksportowane lub udostępnione kopie utworów i biblioteki są zapisywane w prywatnej pamięci podręcznej aplikacji i zastępowane przy kolejnym eksporcie lub udostępnieniu. Jeśli baza danych aplikacji ulegnie uszkodzeniu, jej opatrzona datą kopia może zostać zachowana w prywatnym folderze aplikacji w celu odzyskania danych. Wszystko to pozostaje w prywatnej pamięci aplikacji i jest usuwane po odinstalowaniu aplikacji.</p>
+
+<h2>Udostępnianie stronom trzecim</h2>
+<p>Nie udostępniamy danych nikomu, ponieważ ich nie zbieramy.</p>
+
+<h2>Bezpieczeństwo</h2>
+<p>Ponieważ wszystkie dane pozostają na Państwa urządzeniu i żadne nie są do nas przesyłane, nie ma na serwerze Państwa danych, które wymagałyby ochrony. Standardowa izolacja aplikacji w systemie Android chroni Państwa dane lokalne tak samo, jak w przypadku każdej innej aplikacji na urządzeniu.</p>
+
+<h2>Dzieci</h2>
+<p>Fiddle nie jest skierowany do dzieci poniżej 13. roku życia i nie zbiera danych od nikogo, w tym od dzieci.</p>
+
+<h2>Państwa prawa i kontrola nad danymi</h2>
+<p>Ponieważ wszystko jest przechowywane wyłącznie na Państwa urządzeniu, mają Państwo zawsze pełną kontrolę: w każdej chwili można przeglądać, edytować, eksportować lub usuwać swoje utwory, playlisty i zespoły w aplikacji. Usunięty utwór trafia do Kosza aplikacji, skąd można go przywrócić; pozostaje w lokalnej bazie danych aplikacji — oraz w każdym zapisanym pliku kopii zapasowej biblioteki — dopóki nie odinstalują Państwo aplikacji lub nie wyczyszczą jej pamięci w ustawieniach systemu Android; obie te czynności trwale usuwają wszystkie dane.</p>
+
+<h2>Zmiany niniejszej polityki</h2>
+<p>Jeśli niniejsza polityka ulegnie zmianie, zaktualizowana wersja zostanie opublikowana pod tym samym adresem, z nową datą ostatniej aktualizacji u góry.</p>
+
+<h2>Kontakt</h2>
+<p>W sprawie pytań dotyczących niniejszej polityki prosimy o kontakt: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="tr" data-title="Fiddle — Gizlilik Politikası" hidden>
+<h1>Gizlilik Politikası</h1>
+<p class="meta">
+  <span>Uygulama: Fiddle</span>
+  <span>Geliştirici: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Son güncelleme: 21 Eylül 2026</span>
+</p>
+
+<p class="lede">Fiddle sizinle ilgili hiçbir veri toplamaz. Sunucu yoktur, hesap yoktur ve cihazınızdan hiçbir şey çıkmaz — grup arkadaşlarınızın cihazlarıyla aynı Wi‑Fi ağında kurulan isteğe bağlı, doğrudan bağlantı sırasında olan durum hariç.</p>
+
+<h2>Özet</h2>
+<p>Fiddle, müzisyenler için bir akor kitabıdır: şarkı kütüphanesi, transpozisyon, kapo, akor diyagramları, metronom, setlistler, otomatik kaydırmalı performans modu ve grubu senkronize tutmak için canlı oturum sunar. Uygulamanın arka uç sunucusu, kullanıcı hesabı veya oturum açma işlemi yoktur. Uygulamanın kendisi internete asla tek bir ağ isteği bile göndermez.</p>
+<p>Gizlilik politikası bağlantısına, "İletişim" ve "İçeriği bildir" düğmelerine ya da içe aktardığınız bir şarkıyla birlikte saklanan kaynak bağlantısına dokunmak tarayıcınızı veya e-posta uygulamanızı açar; bu uygulamaların yaptıkları kendi politikalarına tabidir.</p>
+
+<h2>Hangi verileri topluyoruz</h2>
+<p>Hiçbirini. Fiddle'da analitik, telemetri, reklam SDK'sı veya üçüncü taraf çökme raporlama sistemi bulunmaz. Geliştirici verilerinizi hiçbir şekilde almaz, görmez veya saklamaz.</p>
+
+<h2>Verileriniz nerede tutulur</h2>
+<p>Her şey yalnızca cihazınızda, yerel bir veritabanında saklanır: şarkılarınız (sözler ve akorlar), çalma listeleri ve setlistler, üye adları ve enstrümanlarıyla birlikte gruplar, ayarlar ve notlar. Uygulamayı kaldırmak bunların tümünü siler.</p>
+
+<h2>İzinler ve neden gerekli oldukları</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">İnternet</span>
+    <p>İnternete erişmek için kullanılmaz. Android, yerel bir Wi‑Fi ağı üzerindeki bağlantı da dahil olmak üzere her türlü ağ bağlantısı için bu izni zorunlu tutar; bu izin yalnızca aşağıda açıklanan Canlı Oturum özelliği için kullanılır.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Mikrofon</span>
+    <p>Uygulamanın iki bölümünde kullanılır. Birincisi, akort cihazında: mikrofon, akort ekranı açık olduğu sürece çekilen bir telin sesini dinler, perdesini ölçer ve hedef perdeden yüksek mi alçak mı olduğunu gösterir. Davullar için akort cihazı aynı şekilde çalışır, ancak her bir gergideki perdeyi ayrı ayrı ölçer ve hepsini eşitlemek için hangi gerginin sıkılması veya gevşetilmesi gerektiğini gösterir. İkincisi, lider bir canlı oturum sırasında bir ses gecikmesi ölçümü başlattığında: uygulama bir dizi kısa ton çalar ve mikrofonun bunları ne zaman duyduğunu ölçer, böylece metronom her telefonda aynı anda tıklayabilir. Her iki durumda da ses telefonun belleğinde anında işlenir; bir dosyaya asla kaydedilmez, saklanmaz veya herhangi bir yere gönderilmez. Uygulama bu izni yalnızca ne için kullanılacağını size gösterdikten sonra ister — akort cihazını açtığınızda ya da Canlı ekranında "Mikrofona izin ver" seçeneğine dokunduğunuzda — ve isterseniz reddedebilirsiniz; uygulamadaki her şey mikrofon olmadan da çalışır. Akort cihazı ekranından çıktığınız ya da uygulama arka plana geçtiği anda mikrofon kullanılmaz hale gelir.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Ağ durumu ve multicast</span>
+    <p>Grup üyelerinin cihazlarının aynı Wi‑Fi ağında birbirini bulabilmesi (<code>_fiddle-lan._tcp</code> olarak duyurulan ve TCP <code>47811</code> portunu kullanan mDNS servis keşfi) ve bağlı kalabilmesi için gereklidir. Yalnızca Canlı Oturum için kullanılır ve internet erişimi sağlamaz.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Ön plan hizmeti</span>
+    <p>Bir performans sırasında ekran kapandığında metronomun çalmaya devam etmesini sağlar. Metronom çalışırken Android, durdurma denetimi bulunan kalıcı bir "Metronom çalıyor" bildirimi gösterir; tıklamayı durdurduğunuzda bu bildirim kaldırılır.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Ses ayarlarını değiştirme</span>
+    <p>Metronom ve akor seslerini çalmak için gereklidir.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Titreşim</span>
+    <p>Dokunuşlarda dokunsal geri bildirim sağlar.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Dosya erişimi — yalnızca Android 12 ve altı</span>
+    <p>Uygulamanın kullandığı bir dosya kitaplığı tarafından bildirilir ve yalnızca Android 12 ve önceki sürümlerle sınırlıdır (<code>maxSdkVersion=32</code>). Fiddle kendi başına depolama alanınızda gezinmez veya oraya yazmaz: içe aktardığınız dosyalar sistemin dosya seçici aracıyla seçilir, dışa aktarılan dosyalar ise nereye gideceklerini sizin seçtiğiniz sistemin paylaşım menüsüne teslim edilir.</p>
+  </div>
+</div>
+
+<h2>Canlı Oturum — tek ağ özelliği</h2>
+<p>Aynı Wi‑Fi ağındaki grup üyeleri cihazlarını doğrudan birbirine bağlayabilir. Bir oturum başlattığınızda, oturumun adı yerel ağda duyurulur ve o ağdaki her cihaz tarafından görülebilir. Bir oturuma katıldığınızda, girdiğiniz görünen ad ile uygulamanın cihazınız için oluşturduğu rastgele bir kimlik (donanım veya hesap kimliği değildir) lidere gönderilir; lider de üye listesini oturumdaki herkesle paylaşır. Lider o anda çalınan şarkıyı ve şarkı bir setlistten açıldıysa setlistin adını ve sırasını gönderir; sahip olmadığınız şarkılar — o şarkıya ait liderin kişisel notları, YouTube bağlantısı, ton, kapo ve tempo dahil — cihazınıza kopyalanır; setlistin geri kalanındaki şarkılar da anında açılabilmeleri için önceden kopyalanabilir. Bu veriler yerel ağın dışına asla çıkmaz ve hiçbir sunucudan geçmez. Bağlantı doğrudandır, şifrelenmemiştir ve parolayla korunmamıştır; bu nedenle aynı ağdaki herhangi biri oturuma katılabilir veya onu izleyebilir. Canlı Oturumu yalnızca güvendiğiniz bir Wi‑Fi ağında kullanın. Liderden alınan şarkılar kütüphanenize kaydedilir ve oturum bittikten sonra da orada kalır; istemiyorsanız bunları diğer şarkılar gibi silebilirsiniz. Setlistin kendisi kaydedilmez. Katılım gönüllüdür ve yalnızca oturumu açık tuttuğunuz sürece devam eder.</p>
+
+<h2>Şarkı içe aktarma</h2>
+<p>Sistemin dosya seçici aracı üzerinden kendi dosyalarınızı (metin, <code>ChordPro</code>, Word, Excel, CSV veya kütüphanenizle birleştirilen bir Fiddle kütüphane dosyası olan <code>JSON</code> biçimi) seçersiniz. Dosyalar yerel olarak okunur ve hiçbir yere gönderilmez.</p>
+
+<h2>Dışa aktarma ve paylaşma</h2>
+<p>Bir şarkıyı PDF, düz metin veya <code>ChordPro</code> olarak; bir setlisti veya grup profilini (üye adları ve enstrümanları dahil) <code>JSON</code> biçiminde bir dosya olarak; notlar, favoriler ve çöpteki şarkılar dahil olmak üzere tüm kütüphanenizi <code>JSON</code> biçiminde bir yedek olarak, hepsini sistemin paylaşım menüsü üzerinden dışa aktarabilirsiniz. Hedefi siz seçersiniz; uygulama hiçbir şeyi kendiliğinden göndermez.</p>
+
+<h2>Android yedeklemesi</h2>
+<p>Fiddle, Android'in otomatik uygulama verisi yedekleme özelliğinden çıkar, bu nedenle işletim sistemi uygulama verilerini Google hesabınıza kopyalamaz. Kütüphanenizin bir kopyasını istiyorsanız uygulama içindeki "Kütüphane yedeği kaydet (JSON)" seçeneğini kullanın.</p>
+
+<h2>Geçici dosyalar</h2>
+<p>Şarkılarınızın ve kütüphanenizin dışa aktarılan veya paylaşılan kopyaları, uygulamanın özel önbelleğine yazılır ve bir sonraki dışa aktarma veya paylaşma işleminde bunların yerine yenileri yazılır. Uygulamanın veritabanı zarar görürse, kurtarma amacıyla tarih damgalı bir kopyası uygulamanın özel klasöründe tutulabilir. Bunların tümü uygulamanın özel deposunda kalır ve uygulamayı kaldırdığınızda silinir.</p>
+
+<h2>Üçüncü taraflarla paylaşım</h2>
+<p>Veri toplamadığımız için kimseyle veri paylaşmıyoruz.</p>
+
+<h2>Güvenlik</h2>
+<p>Tüm veriler cihazınızda kaldığından ve hiçbiri bize iletilmediğinden, korunması gereken herhangi bir veriniz sunucuda bulunmaz. Standart Android uygulama korumalı alanı (sandboxing), cihazdaki diğer tüm uygulamalarda olduğu gibi yerel verilerinizi de korur.</p>
+
+<h2>Çocuklar</h2>
+<p>Fiddle, 13 yaşın altındaki çocuklara yönelik değildir ve çocuklar dahil hiç kimseden veri toplamaz.</p>
+
+<h2>Haklarınız ve verileriniz üzerindeki denetiminiz</h2>
+<p>Her şey yalnızca cihazınızda saklandığından, verileriniz üzerinde her zaman tam denetime sahipsiniz: şarkılarınızı, çalma listelerinizi ve gruplarınızı uygulama içinden istediğiniz zaman görüntüleyebilir, düzenleyebilir, dışa aktarabilir veya silebilirsiniz. Silinen bir şarkı, uygulamanın Çöp kutusuna taşınır ve buradan geri yükleyebilirsiniz; uygulamayı kaldırana veya Android ayarlarından deposunu temizleyene kadar — bu iki işlemden biri her şeyi kalıcı olarak siler — şarkı, uygulamanın yerel veritabanında ve kaydettiğiniz herhangi bir kütüphane yedek dosyasında kalmaya devam eder.</p>
+
+<h2>Bu politikadaki değişiklikler</h2>
+<p>Bu politika değişirse, güncellenmiş sürüm aynı adreste, en üstte yeni bir son güncelleme tarihiyle birlikte yayımlanır.</p>
+
+<h2>İletişim</h2>
+<p>Bu politikayla ilgili sorularınız için iletişim: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="zh-Hans" data-title="Fiddle — 隐私政策" hidden>
+<h1>隐私政策</h1>
+<p class="meta">
+  <span>应用：Fiddle</span>
+  <span>开发者：Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>最后更新：2026年9月21日</span>
+</p>
+
+<p class="lede">Fiddle 不收集您的任何数据。没有服务器，没有账户，任何信息都不会离开您的设备——除非您在同一 Wi-Fi 网络中与自己乐队成员的设备建立可选的直接连接。</p>
+
+<h2>概述</h2>
+<p>Fiddle 是一款面向音乐人的和弦曲谱应用：曲库、移调、变调夹、和弦图、节拍器、歌单、带自动滚动的演出模式，以及用于让乐队保持同步的实时会话功能。该应用没有后端服务器，没有用户账户，也没有登录功能。应用本身从不向互联网发送任何网络请求。</p>
+<p>点击隐私政策链接、"联系我们"和"举报内容"按钮，或与您导入的歌曲一起保存的来源链接，会打开您的浏览器或电子邮件应用；这些应用的行为由其自身的政策规定。</p>
+
+<h2>我们收集哪些数据</h2>
+<p>不收集任何数据。Fiddle 没有分析功能、没有遥测、没有广告 SDK，也没有第三方崩溃报告。开发者不会接收、查看或存储您的任何数据。</p>
+
+<h2>您的数据存储在哪里</h2>
+<p>所有数据都仅存储在您设备本地的本地数据库中：您的歌曲（歌词与和弦）、播放列表与歌单、包含成员姓名和乐器的乐队信息、设置以及笔记。卸载应用会删除所有这些数据。</p>
+
+<h2>权限及其用途</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">互联网</span>
+    <p>不用于访问互联网。Android 要求任何网络连接都必须获得此权限，包括本地 Wi-Fi 网络上的连接，而这正是该权限的唯一用途——即下文所述的实时会话功能。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">麦克风</span>
+    <p>在应用的两个部分中使用。首先是调音器：只要调音器界面处于打开状态，麦克风就会监听拨动的琴弦，以测量音高并显示其高于还是低于目标音高。对于鼓类乐器，调音器的工作方式相同，但会分别测量每个调音钮处的音高，并显示哪个调音钮需要拧紧或放松以使音高一致。其次是在实时会话期间，当主持人开始延迟测量时：应用会播放一系列短促的音调，并测量麦克风听到它们的时刻，以便节拍器能在每部手机上同一瞬间发出点击声。在这两种情况下，声音都会立即在手机内存中被处理，绝不会被录制为文件、存储或发送到任何地方。应用只有在向您说明用途之后才会请求该权限——即当您打开调音器，或在"实时"界面点击"允许使用麦克风"时——您可以拒绝授权；应用中的其他所有功能在没有麦克风的情况下也能正常使用。一旦您离开调音器界面或应用进入后台，麦克风就会停止使用。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">网络状态与多播</span>
+    <p>用于让乐队成员的设备能够在同一 Wi-Fi 网络中互相发现（mDNS 服务发现，以 <code>_fiddle-lan._tcp</code> 的名称通过 TCP 端口 <code>47811</code> 进行广播）并保持连接。仅用于实时会话功能，不授予任何互联网访问权限。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">前台服务</span>
+    <p>使节拍器在演出过程中屏幕熄灭后仍能继续播放。节拍器运行期间，Android 会显示一条常驻的"节拍器正在播放"通知，并附带停止按钮；一旦您停止节拍声，该通知即被移除。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">修改音频设置</span>
+    <p>播放节拍器和和弦音效所必需。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">振动</span>
+    <p>点按时的触觉反馈。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">文件访问——仅限 Android 12 及更早版本</span>
+    <p>由应用所使用的一个文件库声明，仅适用于 Android 12 及更早版本（<code>maxSdkVersion=32</code>）。Fiddle 不会自行浏览或写入您的存储空间：您导入的文件通过系统文件选择器选取，导出的文件则通过系统分享面板处理，由您自行选择去向。</p>
+  </div>
+</div>
+
+<h2>实时会话——唯一的网络功能</h2>
+<p>处于同一 Wi-Fi 网络中的乐队成员可以直接连接他们的设备。当您开始一个会话时，其名称会在本地网络上广播，并对该网络中的所有设备可见。当您加入时，您会向主持人发送您输入的显示名称，以及应用为您的设备生成的一个随机标识符（并非硬件或账户 ID）；主持人会与会话中的所有人共享成员列表。主持人会发送当前正在播放的歌曲，如果该歌曲是从某个歌单中打开的，还会发送歌单的名称与顺序；您没有的歌曲——包括主持人为该歌曲添加的个人笔记、YouTube 链接、调式、变调夹设置和速度——会被复制到您的设备上，歌单中其余的歌曲也可能被提前复制，以便能够立即打开。这些数据绝不会离开本地网络，也绝不会经过任何服务器。该连接是直接连接，未经加密，也没有密码保护，因此同一网络中的任何人都可能加入或观察某个会话；请仅在您信任的 Wi-Fi 网络中使用实时会话功能。从主持人处收到的歌曲会保存到您的曲库中，并在会话结束后依然保留；如果您不想保留它们，可以像删除其他任何歌曲一样将其删除。歌单本身不会被保存。加入会话是自愿的，且仅在您保持会话开启期间持续。</p>
+
+<h2>导入歌曲</h2>
+<p>您通过系统文件选择器自行选取文件（文本、<code>ChordPro</code>、Word、Excel、CSV，或 Fiddle 曲库 <code>JSON</code> 文件，后者会被合并到您的曲库中）。文件在本地读取，绝不会被发送到任何地方。</p>
+
+<h2>导出与分享</h2>
+<p>您可以将歌曲导出为 PDF、纯文本或 <code>ChordPro</code>，将歌单或乐队资料（包括成员姓名和乐器）导出为 <code>JSON</code> 文件，也可以将您的整个曲库——包括笔记、收藏和已删除的歌曲——导出为 <code>JSON</code> 备份，所有这些均通过系统分享菜单完成。目标位置由您自行选择；应用绝不会自行发送任何内容。</p>
+
+<h2>Android 备份</h2>
+<p>Fiddle 已退出 Android 的自动应用数据备份功能，因此操作系统不会将应用数据复制到您的 Google 账户。如果您想要一份曲库的副本，请在应用中使用"保存曲库备份（JSON）"功能。</p>
+
+<h2>临时文件</h2>
+<p>导出或分享的歌曲及曲库副本会被写入应用的私有缓存中，并在您下次导出或分享时被替换。如果应用的数据库损坏，可能会在应用的私有文件夹中保留一份带日期标记的副本以便恢复。所有这些内容都保留在应用的私有存储空间内，并在您卸载应用时被移除。</p>
+
+<h2>与第三方共享</h2>
+<p>我们不会与任何人共享数据，因为我们本就不收集任何数据。</p>
+
+<h2>安全</h2>
+<p>由于所有数据都保留在您的设备上，没有任何数据会传输给我们，因此也就不存在需要我们在服务器上保护的您的数据。标准的 Android 应用沙盒机制会像保护设备上的其他任何应用一样保护您的本地数据。</p>
+
+<h2>儿童</h2>
+<p>Fiddle 并非面向 13 岁以下儿童设计，并且不会收集任何人（包括儿童）的数据。</p>
+
+<h2>您的权利与对数据的控制</h2>
+<p>由于所有内容都仅存储在您的设备上，您始终拥有完全的控制权：您可以随时在应用内查看、编辑、导出或删除您的歌曲、播放列表和乐队信息。已删除的歌曲会被移至应用的回收站，您可以从中恢复；它会一直保留在应用的本地数据库中——以及您已保存的任何曲库备份文件中——直到您卸载应用或在 Android 设置中清除其存储空间为止，这两种操作都会永久删除所有数据。</p>
+
+<h2>本政策的变更</h2>
+<p>如果本政策发生变更，更新后的版本将发布在同一地址，页面顶部会显示新的最后更新日期。</p>
+
+<h2>联系我们</h2>
+<p>如对本政策有任何疑问，请联系：<a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="ja" data-title="Fiddle — プライバシーポリシー" hidden>
+<h1>プライバシーポリシー</h1>
+<p class="meta">
+  <span>アプリ: Fiddle</span>
+  <span>開発者: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>最終更新日: 2026年9月21日</span>
+</p>
+
+<p class="lede">Fiddle はお客様に関するいかなるデータも収集しません。サーバーもアカウントもなく、何も端末の外に出ることはありません——唯一の例外は、同じWi-Fiネットワーク上にあるご自身のバンドメンバーの端末との、任意の直接接続時です。</p>
+
+<h2>概要</h2>
+<p>Fiddle はミュージシャンのためのコードブックです。楽曲ライブラリ、移調、カポ、コードダイアグラム、メトロノーム、セットリスト、自動スクロール付きのパフォーマンスモード、そしてバンドの同期を保つためのライブセッション機能を備えています。本アプリにはバックエンドサーバー、ユーザーアカウント、ログインのいずれもありません。アプリ自体がインターネットへネットワークリクエストを送信することは一切ありません。</p>
+<p>プライバシーポリシーへのリンク、「お問い合わせ」および「コンテンツを報告」ボタン、またはインポートした楽曲に保存されているソースリンクをタップすると、ブラウザまたはメールアプリが開きます。それらのアプリの動作は、それぞれ独自のポリシーに従います。</p>
+
+<h2>収集するデータ</h2>
+<p>収集するデータはありません。Fiddle には解析機能、テレメトリ、広告SDK、サードパーティのクラッシュレポートのいずれもありません。開発者は、お客様のデータを受け取ることも、閲覧することも、保存することもありません。</p>
+
+<h2>データの保存場所</h2>
+<p>すべてのデータはお客様の端末内のローカルデータベースにのみ保存されます。楽曲（歌詞とコード）、プレイリストとセットリスト、メンバー名と担当楽器を含むバンド情報、設定、メモなどです。アプリをアンインストールすると、これらすべてが削除されます。</p>
+
+<h2>権限とその必要性</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">インターネット</span>
+    <p>インターネットへの接続には使用しません。Androidでは、ローカルのWi-Fiネットワーク上の接続を含め、あらゆるネットワーク接続にこの権限が必要とされます。この権限が使われるのは、下記で説明するライブセッション機能のみです。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">マイク</span>
+    <p>アプリ内の2つの機能で使用します。1つ目はチューナーです。チューナー画面が開いている間、マイクが弦の音を聞き取り、音程を測定して、目標より高いか低いかを表示します。ドラムの場合も同様の仕組みで、各ラグごとに個別に音程を測定し、均一にするためにどのラグを締めるか緩めるかを表示します。2つ目は、ライブセッションの最中に、リーダーが音声遅延の測定を開始したときです。アプリが一連の短い音を再生し、マイクがそれを検知したタイミングを測定することで、メトロノームがすべての端末で同じ瞬間にクリック音を鳴らせるようにします。いずれの場合も、音声は端末のメモリ内で即座に処理され、ファイルとして録音・保存されたり、どこかへ送信されたりすることは一切ありません。アプリがこの権限を要求するのは、その用途を説明した後——チューナーを開いたとき、またはライブ画面で「マイクを許可」をタップしたとき——のみであり、拒否することもできます。マイク以外のすべての機能は、マイクなしでも動作します。チューナー画面を離れるか、アプリがバックグラウンドに移行すると、マイクの使用は直ちに停止します。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">ネットワーク状態とマルチキャスト</span>
+    <p>バンドメンバーの端末が同じWi-Fiネットワーク上でお互いを見つけ（<code>_fiddle-lan._tcp</code>としてTCPポート<code>47811</code>経由で告知されるmDNSサービスディスカバリ）、接続を維持するために必要です。ライブセッション機能でのみ使用され、インターネットへのアクセスは一切許可しません。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">フォアグラウンドサービス</span>
+    <p>演奏中に画面が消灯してもメトロノームの再生を継続するために使用します。メトロノームの動作中、Androidは停止操作付きの「メトロノームが再生中です」という常駐通知を表示します。クリック音を止めると、この通知は削除されます。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">オーディオ設定の変更</span>
+    <p>メトロノームとコード音の再生に必要です。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">振動</span>
+    <p>タップ時の触覚フィードバックに使用します。</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">ファイルアクセス — Android 12以前のみ</span>
+    <p>アプリが使用するファイルライブラリによって宣言されているもので、Android 12以前（<code>maxSdkVersion=32</code>）に限られます。Fiddle が自らストレージを閲覧したり書き込んだりすることはありません。インポートするファイルはシステムのファイル選択ツールを通じて選び、エクスポートはシステムの共有シートに渡され、送信先はお客様自身が選択します。</p>
+  </div>
+</div>
+
+<h2>ライブセッション — 唯一のネットワーク機能</h2>
+<p>同じWi-Fiネットワーク上のバンドメンバーは、端末同士を直接接続できます。セッションを開始すると、その名前がローカルネットワーク上に告知され、同じネットワーク上のすべての端末から見えるようになります。参加する際には、入力した表示名と、アプリがお客様の端末のために生成したランダムな識別子（ハードウェアIDやアカウントIDではありません）をリーダーに送信します。リーダーはセッション内の全員とメンバーリストを共有します。リーダーは現在再生中の楽曲を送信し、それがセットリストから開かれたものであれば、セットリストの名前と順序も送信します。お客様がお持ちでない楽曲——その楽曲に関するリーダーの個人的なメモ、YouTubeリンク、キー、カポ、テンポを含む——はお客様の端末にコピーされ、セットリストの残りの楽曲もすぐに開けるよう事前にコピーされる場合があります。これらのデータがローカルネットワークの外に出ることはなく、いかなるサーバーも経由しません。この接続は直接接続であり、暗号化やパスワード保護はされていないため、同じネットワーク上にいる誰でもセッションに参加したり、内容を観察したりできる可能性があります。ライブセッションは信頼できるWi-Fiネットワークでご利用ください。リーダーから受信した楽曲はライブラリに保存され、セッション終了後もそのまま残ります。不要であれば、他の楽曲と同様に削除できます。セットリスト自体は保存されません。参加は任意であり、セッションを開いている間のみ有効です。</p>
+
+<h2>楽曲のインポート</h2>
+<p>システムのファイル選択ツールを通じて、ご自身のファイル（テキスト、<code>ChordPro</code>、Word、Excel、CSV、またはお客様のライブラリに統合されるFiddleライブラリの<code>JSON</code>ファイル）を選択します。ファイルはローカルで読み込まれ、どこにも送信されることはありません。</p>
+
+<h2>エクスポートと共有</h2>
+<p>楽曲はPDF、プレーンテキストまたは<code>ChordPro</code>として、セットリストやバンドプロフィール（メンバー名と担当楽器を含む）は<code>JSON</code>ファイルとして、そしてノート、お気に入り、ゴミ箱内の楽曲を含むライブラリ全体は<code>JSON</code>バックアップとして、いずれもシステムの共有メニューを通じてエクスポートできます。送信先はお客様が選択し、アプリが自らの判断で何かを送信することはありません。</p>
+
+<h2>Androidバックアップ</h2>
+<p>Fiddle はAndroidの自動アプリデータバックアップを無効にしているため、OSがアプリのデータをお客様のGoogleアカウントにコピーすることはありません。ライブラリのコピーが必要な場合は、アプリ内の「ライブラリのバックアップを保存(JSON)」をご利用ください。</p>
+
+<h2>一時ファイル</h2>
+<p>エクスポートまたは共有された楽曲やライブラリのコピーは、アプリの非公開キャッシュに書き込まれ、次回のエクスポートまたは共有時に置き換えられます。アプリのデータベースが破損した場合、復旧用に日付付きのコピーがアプリの非公開フォルダに保持されることがあります。これらはすべてアプリの非公開ストレージ内にとどまり、アプリをアンインストールすると削除されます。</p>
+
+<h2>第三者への提供</h2>
+<p>データを収集していないため、誰とも共有することはありません。</p>
+
+<h2>セキュリティ</h2>
+<p>すべてのデータはお客様の端末内にとどまり、当社に送信されることはないため、当社のサーバー上に保護すべきお客様のデータは存在しません。端末上の他のあらゆるアプリと同様に、標準的なAndroidアプリのサンドボックス機構がお客様のローカルデータを保護します。</p>
+
+<h2>お子様について</h2>
+<p>Fiddle は13歳未満のお子様を対象としたものではなく、お子様を含め、誰からもデータを収集することはありません。</p>
+
+<h2>お客様の権利とデータの管理</h2>
+<p>すべてのデータはお客様の端末にのみ保存されているため、お客様は常に完全な管理権を持っています。アプリ内でいつでも楽曲、プレイリスト、バンド情報を閲覧、編集、エクスポート、削除できます。削除された楽曲はアプリの「ゴミ箱」に移動され、そこから復元できます。アプリをアンインストールするか、Androidの設定でストレージを消去するまで、その楽曲はアプリのローカルデータベース内、および保存済みのライブラリバックアップファイル内に残り続けます。いずれの操作を行っても、すべてのデータが完全に削除されます。</p>
+
+<h2>本ポリシーの変更</h2>
+<p>本ポリシーが変更された場合、更新版は同じアドレスで公開され、ページ上部の最終更新日が新しい日付に更新されます。</p>
+
+<h2>お問い合わせ</h2>
+<p>本ポリシーに関するご質問は、こちらまでご連絡ください: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="ko" data-title="Fiddle — 개인정보 처리방침" hidden>
+<h1>개인정보 처리방침</h1>
+<p class="meta">
+  <span>앱: Fiddle</span>
+  <span>개발자: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>최종 업데이트: 2026년 9월 21일</span>
+</p>
+
+<p class="lede">Fiddle은 사용자에 대한 어떠한 데이터도 수집하지 않습니다. 서버도 없고, 계정도 없으며, 같은 Wi-Fi 네트워크에 있는 밴드 멤버의 기기와 선택적으로 직접 연결되는 경우를 제외하고는 어떠한 정보도 기기 밖으로 나가지 않습니다.</p>
+
+<h2>요약</h2>
+<p>Fiddle은 음악가를 위한 코드북입니다. 곡 라이브러리, 이조, 카포, 코드 다이어그램, 메트로놈, 세트리스트, 자동 스크롤이 포함된 공연 모드, 그리고 밴드의 박자를 맞추기 위한 라이브 세션 기능을 제공합니다. 이 앱에는 백엔드 서버, 사용자 계정, 로그인 기능이 전혀 없습니다. 앱 자체가 인터넷으로 네트워크 요청을 보내는 일은 절대 없습니다.</p>
+<p>개인정보 처리방침 링크, "문의하기" 및 "콘텐츠 신고" 버튼, 또는 가져온 곡과 함께 저장된 출처 링크를 탭하면 브라우저나 이메일 앱이 열립니다. 이러한 앱의 동작은 해당 앱 자체의 정책에 따라 이루어집니다.</p>
+
+<h2>수집하는 데이터</h2>
+<p>없습니다. Fiddle은 분석 기능, 텔레메트리, 광고 SDK, 타사 충돌 보고 기능이 전혀 없습니다. 개발자는 사용자의 어떠한 데이터도 수신하거나, 확인하거나, 저장하지 않습니다.</p>
+
+<h2>데이터 저장 위치</h2>
+<p>모든 데이터는 사용자 기기 내 로컬 데이터베이스에만 저장됩니다: 곡(가사와 코드), 플레이리스트와 세트리스트, 멤버 이름과 악기가 포함된 밴드 정보, 설정, 메모입니다. 앱을 삭제하면 이 모든 데이터가 삭제됩니다.</p>
+
+<h2>권한 및 필요한 이유</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">인터넷</span>
+    <p>인터넷에 접속하는 데 사용되지 않습니다. Android는 같은 로컬 Wi-Fi 네트워크상의 연결을 포함한 모든 네트워크 연결에 이 권한을 요구하며, 이 권한이 사용되는 유일한 용도는 아래에 설명된 라이브 세션 기능입니다.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">마이크</span>
+    <p>앱의 두 부분에서 사용됩니다. 첫 번째는 튜너입니다. 튜너 화면이 열려 있는 동안 마이크가 튕긴 현의 소리를 듣고 음높이를 측정하여 목표 음보다 높은지 낮은지를 표시합니다. 드럼의 경우 튜너는 같은 방식으로 작동하되, 각 러그의 음높이를 따로 측정하여 고르게 맞추기 위해 어느 러그를 조이거나 풀어야 하는지 표시합니다. 두 번째는 라이브 세션 중에 리더가 오디오 지연 측정을 시작할 때입니다: 앱이 일련의 짧은 음을 재생하고 마이크가 그것을 듣는 시점을 측정하여, 모든 휴대폰에서 메트로놈이 같은 순간에 클릭음을 낼 수 있도록 합니다. 두 경우 모두 소리는 휴대폰 메모리에서 즉시 처리되며, 파일로 녹음되거나 저장되거나 어디로든 전송되는 일은 절대 없습니다. 앱은 그 용도를 먼저 보여준 뒤에만 이 권한을 요청합니다—튜너를 열 때, 또는 라이브 화면에서 "마이크 허용"을 탭할 때—그리고 사용자는 이를 거부할 수 있습니다. 앱의 다른 모든 기능은 마이크 없이도 작동합니다. 튜너 화면을 벗어나거나 앱이 백그라운드로 전환되는 즉시 마이크 사용이 중지됩니다.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">네트워크 상태 및 멀티캐스트</span>
+    <p>밴드 멤버의 기기가 같은 Wi-Fi 네트워크에서 서로를 찾고(<code>_fiddle-lan._tcp</code>로 알려지며 TCP 포트 <code>47811</code>을 사용하는 mDNS 서비스 검색) 연결을 유지하는 데 필요합니다. 오직 라이브 세션에만 사용되며, 인터넷 접근 권한은 전혀 부여하지 않습니다.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">포그라운드 서비스</span>
+    <p>공연 중 화면이 꺼져도 메트로놈이 계속 재생되도록 유지합니다. 메트로놈이 작동하는 동안 Android는 정지 버튼이 있는 "메트로놈이 재생 중이에요"라는 지속적인 알림을 표시하며, 클릭음을 멈추는 즉시 이 알림은 제거됩니다.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">오디오 설정 수정</span>
+    <p>메트로놈과 코드 소리를 재생하는 데 필요합니다.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">진동</span>
+    <p>탭 시 햅틱 피드백에 사용됩니다.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">파일 접근 — Android 12 이하에서만</span>
+    <p>앱이 사용하는 파일 라이브러리에서 선언한 권한으로, Android 12 이하(<code>maxSdkVersion=32</code>)에만 해당됩니다. Fiddle은 스스로 저장소를 탐색하거나 쓰지 않습니다: 가져오는 파일은 시스템 파일 선택기를 통해 사용자가 직접 선택하며, 내보내기는 시스템 공유 시트로 전달되어 사용자가 목적지를 선택합니다.</p>
+  </div>
+</div>
+
+<h2>라이브 세션 — 유일한 네트워크 기능</h2>
+<p>같은 Wi-Fi 네트워크상의 밴드 멤버들은 기기를 직접 연결할 수 있습니다. 세션을 시작하면 그 이름이 로컬 네트워크에 알려지며 해당 네트워크의 모든 기기에서 보이게 됩니다. 참여할 때는 입력한 표시 이름과 앱이 사용자 기기를 위해 생성한 임의의 식별자(하드웨어나 계정 ID가 아님)를 리더에게 전송하며, 리더는 세션의 모든 사람과 멤버 목록을 공유합니다. 리더는 현재 재생 중인 곡을 전송하며, 그 곡이 세트리스트에서 열린 것이라면 세트리스트의 이름과 순서도 함께 전송합니다. 사용자에게 없는 곡—해당 곡에 대한 리더의 개인 메모, 유튜브 링크, 키, 카포, 템포를 포함하여—은 사용자의 기기로 복사되며, 세트리스트의 나머지 곡들도 즉시 열릴 수 있도록 미리 복사될 수 있습니다. 이 데이터는 로컬 네트워크를 벗어나지 않으며 어떠한 서버도 거치지 않습니다. 이 연결은 직접 연결이며 암호화되거나 비밀번호로 보호되지 않으므로, 같은 네트워크에 있는 누구나 세션에 참여하거나 관찰할 수 있습니다. 신뢰할 수 있는 Wi-Fi 네트워크에서 라이브 세션을 사용하세요. 리더로부터 받은 곡은 사용자의 라이브러리에 저장되며 세션이 끝난 후에도 그대로 남아 있습니다. 원하지 않으면 다른 곡과 마찬가지로 삭제할 수 있습니다. 세트리스트 자체는 저장되지 않습니다. 참여는 자발적이며 세션을 열어둔 동안에만 지속됩니다.</p>
+
+<h2>곡 가져오기</h2>
+<p>시스템 파일 선택기를 통해 사용자가 직접 파일(텍스트, <code>ChordPro</code>, Word, Excel, CSV, 또는 사용자의 라이브러리에 병합되는 Fiddle 라이브러리 <code>JSON</code>)을 선택합니다. 파일은 로컬에서 읽히며 어디로도 전송되지 않습니다.</p>
+
+<h2>내보내기 및 공유</h2>
+<p>곡은 PDF, 일반 텍스트 또는 <code>ChordPro</code>로, 세트리스트나 밴드 프로필(멤버 이름과 악기 포함)은 <code>JSON</code> 파일로, 그리고 메모, 즐겨찾기, 휴지통에 있는 곡을 포함한 전체 라이브러리는 <code>JSON</code> 백업으로 내보낼 수 있으며, 이 모든 과정은 시스템 공유 메뉴를 통해 이루어집니다. 대상은 사용자가 직접 선택하며, 앱이 스스로 무언가를 전송하는 일은 절대 없습니다.</p>
+
+<h2>Android 백업</h2>
+<p>Fiddle은 Android의 자동 앱 데이터 백업을 거부하므로, 운영체제가 앱 데이터를 사용자의 Google 계정으로 복사하지 않습니다. 라이브러리 사본이 필요하다면 앱 내에서 "라이브러리 백업 저장(JSON)"을 사용하세요.</p>
+
+<h2>임시 파일</h2>
+<p>내보내거나 공유된 곡과 라이브러리의 사본은 앱의 비공개 캐시에 기록되며, 다음 내보내기나 공유 시 교체됩니다. 앱의 데이터베이스가 손상될 경우, 복구를 위해 날짜가 표시된 사본이 앱의 비공개 폴더에 보관될 수 있습니다. 이 모든 것은 앱의 비공개 저장소 안에만 있으며 앱을 삭제하면 제거됩니다.</p>
+
+<h2>제3자와의 공유</h2>
+<p>저희는 데이터를 수집하지 않으므로, 누구와도 공유하지 않습니다.</p>
+
+<h2>보안</h2>
+<p>모든 데이터가 사용자의 기기에만 머물고 저희에게 전송되는 데이터가 없으므로, 서버에 보호해야 할 사용자의 데이터 자체가 존재하지 않습니다. 표준 Android 앱 샌드박싱이 기기의 다른 모든 앱과 마찬가지로 사용자의 로컬 데이터를 보호합니다.</p>
+
+<h2>아동</h2>
+<p>Fiddle은 13세 미만의 아동을 대상으로 하지 않으며, 아동을 포함하여 누구로부터도 데이터를 수집하지 않습니다.</p>
+
+<h2>사용자의 권리와 데이터 통제</h2>
+<p>모든 것이 사용자의 기기에만 저장되므로, 사용자는 항상 완전한 통제권을 가집니다: 언제든지 앱 내에서 곡, 플레이리스트, 밴드 정보를 보고, 수정하고, 내보내고, 삭제할 수 있습니다. 삭제된 곡은 앱의 휴지통으로 이동하며, 그곳에서 복원할 수 있습니다. 앱을 삭제하거나 Android 설정에서 저장소를 지우기 전까지, 해당 곡은 앱의 로컬 데이터베이스와 사용자가 저장한 라이브러리 백업 파일에 남아 있습니다. 두 방법 모두 모든 데이터를 영구적으로 삭제합니다.</p>
+
+<h2>이 방침의 변경</h2>
+<p>이 방침이 변경되면 업데이트된 버전이 동일한 주소에 게시되며, 상단에 새로운 최종 업데이트 날짜가 표시됩니다.</p>
+
+<h2>문의</h2>
+<p>이 방침에 대한 문의사항은 다음으로 연락해 주세요: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="hi" data-title="Fiddle — प्राइवेसी पॉलिसी" hidden>
+<h1>प्राइवेसी पॉलिसी</h1>
+<p class="meta">
+  <span>ऐप: Fiddle</span>
+  <span>डेवलपर: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>अंतिम अपडेट: 21 सितंबर 2026</span>
+</p>
+
+<p class="lede">Fiddle आपके बारे में कोई डेटा एकत्र नहीं करता। कोई सर्वर नहीं है, कोई अकाउंट नहीं है, और आपकी डिवाइस से कुछ भी बाहर नहीं जाता — सिवाय इसके कि जब आप एक ही Wi-Fi नेटवर्क पर अपने बैंड के सदस्यों की डिवाइसों से वैकल्पिक, सीधा कनेक्शन बनाते हैं।</p>
+
+<h2>सारांश</h2>
+<p>Fiddle संगीतकारों के लिए एक कॉर्ड बुक है: गीतों की लाइब्रेरी, ट्रांसपोज़िशन, कैपो, कॉर्ड डायग्राम, मेट्रोनोम, सेटलिस्ट, ऑटो-स्क्रॉल वाला परफॉर्मेंस मोड, और बैंड को समन्वित रखने के लिए एक लाइव सेशन। ऐप में कोई बैकएंड सर्वर नहीं है, कोई यूज़र अकाउंट नहीं है, और कोई लॉगिन नहीं है। ऐप खुद इंटरनेट पर कभी कोई नेटवर्क रिक्वेस्ट नहीं भेजता।</p>
+<p>प्राइवेसी पॉलिसी के लिंक, "संपर्क" और "कंटेंट की शिकायत करें" बटन, या आपके द्वारा इंपोर्ट किए गए किसी गीत के साथ सेव किए गए सोर्स लिंक पर टैप करने से आपका ब्राउज़र या ई-मेल ऐप खुलता है; वे ऐप क्या करते हैं, यह उनकी अपनी नीतियों से तय होता है।</p>
+
+<h2>हम कौन सा डेटा एकत्र करते हैं</h2>
+<p>कोई नहीं। Fiddle में कोई एनालिटिक्स नहीं है, कोई टेलीमेट्री नहीं है, कोई एडवरटाइज़िंग SDK नहीं है, और किसी थर्ड-पार्टी क्रैश रिपोर्टिंग का उपयोग नहीं होता। डेवलपर आपका कोई भी डेटा न तो प्राप्त करता है, न देखता है, न ही स्टोर करता है।</p>
+
+<h2>आपका डेटा कहाँ रहता है</h2>
+<p>सब कुछ केवल आपकी डिवाइस पर, एक लोकल डेटाबेस में स्टोर होता है: आपके गीत (बोल और कॉर्ड), प्लेलिस्ट और सेटलिस्ट, सदस्यों के नाम और वाद्ययंत्रों सहित बैंड, सेटिंग्स, और नोट्स। ऐप को अनइंस्टॉल करने से यह सब हट जाता है।</p>
+
+<h2>अनुमतियाँ और वे क्यों आवश्यक हैं</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">इंटरनेट</span>
+    <p>इंटरनेट तक पहुँचने के लिए उपयोग नहीं की जाती। Android को किसी भी नेटवर्क कनेक्शन के लिए यह अनुमति चाहिए होती है, जिसमें लोकल Wi-Fi नेटवर्क पर होने वाला कनेक्शन भी शामिल है — और यही एकमात्र काम है जिसके लिए इसका उपयोग होता है: नीचे बताया गया लाइव सेशन फ़ीचर।</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">माइक्रोफ़ोन</span>
+    <p>ऐप के दो हिस्सों में उपयोग होता है। पहला, ट्यूनर में: जब तक ट्यूनर स्क्रीन खुली रहती है, माइक्रोफ़ोन बजाई गई तार को सुनता है ताकि पिच मापी जा सके और दिखाया जा सके कि यह लक्ष्य से ऊँची है या नीची। ड्रम्स के लिए, ट्यूनर उसी तरह काम करता है लेकिन प्रत्येक लग की पिच अलग-अलग मापता है, और दिखाता है कि उन्हें एक समान बनाने के लिए किस लग को कसना या ढीला करना है। दूसरा, लाइव सेशन के दौरान, जब लीडर ऑडियो-लेटेंसी मापन शुरू करता है: ऐप छोटे-छोटे टोन की एक श्रृंखला बजाता है और मापता है कि माइक्रोफ़ोन उन्हें कब सुनता है, ताकि मेट्रोनोम हर फोन पर एक ही क्षण में क्लिक कर सके। दोनों ही मामलों में ध्वनि को तुरंत, फोन की मेमोरी में प्रोसेस किया जाता है, और इसे कभी किसी फ़ाइल में रिकॉर्ड नहीं किया जाता, स्टोर नहीं किया जाता, या कहीं भेजा नहीं जाता। ऐप यह अनुमति तभी माँगता है जब वह पहले आपको बता चुका हो कि यह किस लिए है — जब आप ट्यूनर खोलते हैं, या जब आप Live स्क्रीन पर "माइक्रोफ़ोन को अनुमति दें" पर टैप करते हैं — और आप इसे अस्वीकार भी कर सकते हैं; ऐप में बाकी सब कुछ माइक्रोफ़ोन के बिना काम करता है। जैसे ही आप ट्यूनर स्क्रीन छोड़ते हैं या ऐप बैकग्राउंड में चला जाता है, माइक्रोफ़ोन का उपयोग रुक जाता है।</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">नेटवर्क स्थिति और मल्टीकास्ट</span>
+    <p>यह इसलिए ज़रूरी है ताकि बैंड सदस्यों की डिवाइसें एक ही Wi-Fi नेटवर्क पर एक-दूसरे को ढूँढ सकें (mDNS सर्विस डिस्कवरी, जो <code>_fiddle-lan._tcp</code> के रूप में TCP पोर्ट <code>47811</code> पर विज्ञापित की जाती है) और जुड़ी रह सकें। इनका उपयोग केवल Live Session के लिए होता है, और ये इंटरनेट का कोई एक्सेस नहीं देतीं।</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">फोरग्राउंड सर्विस</span>
+    <p>परफॉर्मेंस के दौरान स्क्रीन बंद होने पर भी मेट्रोनोम को बजते रहने देती है। जब तक मेट्रोनोम चलता है, Android एक स्थायी "मेट्रोनोम बज रहा है" नोटिफ़िकेशन दिखाता है जिसमें रोकने का कंट्रोल होता है; जैसे ही आप क्लिक बंद करते हैं, यह हट जाता है।</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">ऑडियो सेटिंग्स में बदलाव</span>
+    <p>मेट्रोनोम और कॉर्ड की ध्वनियाँ बजाने के लिए आवश्यक।</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">वाइब्रेशन</span>
+    <p>टैप करने पर हैप्टिक फ़ीडबैक।</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">फ़ाइल एक्सेस — केवल Android 12 और उससे पुराने वर्शन पर</span>
+    <p>यह ऐप द्वारा उपयोग की जाने वाली एक फ़ाइल लाइब्रेरी द्वारा घोषित की जाती है, और यह केवल Android 12 और उससे पुराने वर्शन तक सीमित है (<code>maxSdkVersion=32</code>)। Fiddle अपने आप आपके स्टोरेज को न तो ब्राउज़ करता है और न ही उसमें कुछ लिखता है: आप जो फ़ाइलें इंपोर्ट करते हैं वे सिस्टम फ़ाइल पिकर के ज़रिए चुनी जाती हैं, और एक्सपोर्ट सिस्टम शेयर शीट को सौंपे जाते हैं, जहाँ आप खुद तय करते हैं कि वे कहाँ जाएँ।</p>
+  </div>
+</div>
+
+<h2>लाइव सेशन — एकमात्र नेटवर्क फ़ीचर</h2>
+<p>एक ही Wi-Fi नेटवर्क पर मौजूद बैंड सदस्य अपनी डिवाइसों को सीधे कनेक्ट कर सकते हैं। जब आप सेशन शुरू करते हैं, तो उसका नाम लोकल नेटवर्क पर घोषित होता है और उस नेटवर्क की हर डिवाइस को दिखता है। जब आप जुड़ते हैं, तो आप लीडर को वह डिस्प्ले नाम भेजते हैं जो आपने टाइप किया था और आपकी डिवाइस के लिए ऐप द्वारा बनाया गया एक रैंडम आइडेंटिफ़ायर (न कि कोई हार्डवेयर या अकाउंट ID); लीडर सेशन में सभी के साथ सदस्यों की सूची साझा करता है। लीडर वह गीत भेजता है जो उस समय बजाया जा रहा है, और अगर वह किसी सेटलिस्ट से खोला गया था, तो सेटलिस्ट का नाम और क्रम भी भेजता है; जो गीत आपके पास नहीं हैं — जिसमें लीडर के व्यक्तिगत नोट्स, YouTube लिंक, सुर, कैपो और उस गीत का टेम्पो शामिल है — वे आपकी डिवाइस पर कॉपी हो जाते हैं, और सेटलिस्ट के बाकी गीत भी पहले से कॉपी किए जा सकते हैं ताकि वे तुरंत खुलें। यह डेटा कभी लोकल नेटवर्क से बाहर नहीं जाता और कभी किसी सर्वर से नहीं गुज़रता। कनेक्शन सीधा है और न तो एन्क्रिप्टेड है, न पासवर्ड-प्रोटेक्टेड, इसलिए उसी नेटवर्क पर मौजूद कोई भी व्यक्ति सेशन में शामिल हो सकता है या उसे देख सकता है; Live Session का उपयोग केवल उस Wi-Fi नेटवर्क पर करें जिस पर आपको भरोसा हो। लीडर से मिले गीत आपकी लाइब्रेरी में सेव हो जाते हैं और सेशन खत्म होने के बाद भी वहीं रहते हैं; अगर आप उन्हें नहीं चाहते तो उन्हें किसी भी अन्य गीत की तरह डिलीट करें। सेटलिस्ट खुद सेव नहीं होती। जुड़ना स्वैच्छिक है और तभी तक रहता है जब तक आप सेशन को खुला रखते हैं।</p>
+
+<h2>गीत इंपोर्ट करना</h2>
+<p>आप सिस्टम फ़ाइल पिकर के ज़रिए अपनी फ़ाइलें खुद चुनते हैं (टेक्स्ट, <code>ChordPro</code>, Word, Excel, CSV, या Fiddle लाइब्रेरी का <code>JSON</code>, जो आपकी लाइब्रेरी में मर्ज हो जाता है)। फ़ाइलें लोकल रूप से पढ़ी जाती हैं और कभी कहीं नहीं भेजी जातीं।</p>
+
+<h2>एक्सपोर्ट और शेयरिंग</h2>
+<p>आप किसी गीत को PDF, प्लेन टेक्स्ट या <code>ChordPro</code> के रूप में, किसी सेटलिस्ट या बैंड प्रोफ़ाइल (सदस्यों के नाम और वाद्ययंत्रों सहित) को <code>JSON</code> फ़ाइल के रूप में, और अपनी पूरी लाइब्रेरी को — नोट्स, फ़ेवरेट्स और ट्रैश किए गए गीतों सहित — <code>JSON</code> बैकअप के रूप में, यह सब सिस्टम शेयर मेनू के ज़रिए एक्सपोर्ट कर सकते हैं। गंतव्य आप खुद चुनते हैं; ऐप अपने आप कुछ भी नहीं भेजता।</p>
+
+<h2>Android बैकअप</h2>
+<p>Fiddle Android के ऑटोमैटिक ऐप-डेटा बैकअप से बाहर रहता है, इसलिए ऑपरेटिंग सिस्टम ऐप का डेटा आपके Google अकाउंट पर कॉपी नहीं करता। अगर आप अपनी लाइब्रेरी की एक कॉपी चाहते हैं, तो ऐप में "लाइब्रेरी का बैकअप सहेजें (JSON)" का उपयोग करें।</p>
+
+<h2>अस्थायी फ़ाइलें</h2>
+<p>आपके गीतों और लाइब्रेरी की एक्सपोर्ट या शेयर की गई कॉपियाँ ऐप के प्राइवेट कैश में लिखी जाती हैं और अगली बार एक्सपोर्ट या शेयर करने पर बदल दी जाती हैं। अगर ऐप का डेटाबेस खराब हो जाता है, तो उसकी एक तारीख़-चिह्नित कॉपी रिकवरी के लिए ऐप के प्राइवेट फ़ोल्डर में रखी जा सकती है। यह सब ऐप के प्राइवेट स्टोरेज के भीतर ही रहता है और ऐप को अनइंस्टॉल करने पर हट जाता है।</p>
+
+<h2>थर्ड पार्टी के साथ शेयरिंग</h2>
+<p>हम किसी के साथ भी डेटा साझा नहीं करते, क्योंकि हम कोई डेटा एकत्र ही नहीं करते।</p>
+
+<h2>सुरक्षा</h2>
+<p>चूँकि सारा डेटा आपकी डिवाइस पर ही रहता है और हमें कुछ भी नहीं भेजा जाता, इसलिए किसी सर्वर पर सुरक्षित रखने के लिए आपका कोई डेटा है ही नहीं। स्टैंडर्ड Android ऐप सैंडबॉक्सिंग आपके लोकल डेटा को उसी तरह सुरक्षित रखती है जैसे डिवाइस पर किसी भी अन्य ऐप के डेटा को।</p>
+
+<h2>बच्चे</h2>
+<p>Fiddle 13 वर्ष से कम उम्र के बच्चों के लिए नहीं बनाया गया है, और यह किसी से भी डेटा एकत्र नहीं करता, बच्चों सहित।</p>
+
+<h2>आपके अधिकार और आपके डेटा पर नियंत्रण</h2>
+<p>चूँकि सब कुछ केवल आपकी डिवाइस पर ही स्टोर होता है, इसलिए आप हमेशा पूरे नियंत्रण में रहते हैं: आप कभी भी ऐप के भीतर अपने गीत, प्लेलिस्ट और बैंड देख सकते हैं, बदल सकते हैं, एक्सपोर्ट कर सकते हैं या डिलीट कर सकते हैं। डिलीट किया गया गीत ऐप के ट्रैश में चला जाता है, जहाँ से आप उसे वापस ला सकते हैं; यह ऐप के लोकल डेटाबेस में — और आपके सेव किए गए किसी भी लाइब्रेरी बैकअप फ़ाइल में — तब तक बना रहता है जब तक आप ऐप को अनइंस्टॉल नहीं करते या Android सेटिंग्स में उसका स्टोरेज साफ़ नहीं करते; इन दोनों में से कोई भी कार्रवाई सब कुछ स्थायी रूप से हटा देती है।</p>
+
+<h2>इस नीति में बदलाव</h2>
+<p>अगर यह नीति बदलती है, तो अपडेट किया गया वर्शन इसी पते पर प्रकाशित किया जाएगा, और ऊपर एक नई अंतिम अपडेट तारीख़ दी जाएगी।</p>
+
+<h2>संपर्क</h2>
+<p>इस नीति के बारे में सवालों के लिए संपर्क करें: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
+
+<article lang="id" data-title="Fiddle — Kebijakan Privasi" hidden>
+<h1>Kebijakan Privasi</h1>
+<p class="meta">
+  <span>Aplikasi: Fiddle</span>
+  <span>Pengembang: Nemgic Software</span>
+  <span><code>com.nemgic.fiddle</code></span>
+  <span>Terakhir diperbarui: 21 September 2026</span>
+</p>
+
+<p class="lede">Fiddle tidak mengumpulkan data apa pun tentang Anda. Tidak ada server, tidak ada akun, dan tidak ada yang keluar dari perangkat Anda — kecuali selama koneksi langsung opsional ke perangkat anggota band Anda sendiri pada jaringan Wi-Fi yang sama.</p>
+
+<h2>Ringkasan</h2>
+<p>Fiddle adalah buku akor untuk musisi: perpustakaan lagu, transposisi, capo, diagram akor, metronom, setlist, mode pertunjukan dengan gulir otomatis, dan sesi langsung untuk menjaga band tetap sinkron. Aplikasi ini tidak memiliki server backend, tidak ada akun pengguna, dan tidak ada login. Aplikasi ini sendiri tidak pernah mengirim satu pun permintaan jaringan ke internet.</p>
+<p>Mengetuk tautan kebijakan privasi, tombol "Kontak" dan "Laporkan konten", atau tautan sumber yang disimpan bersama lagu yang Anda impor akan membuka peramban atau aplikasi surel Anda; apa yang dilakukan aplikasi tersebut diatur oleh kebijakan mereka sendiri.</p>
+
+<h2>Data apa yang kami kumpulkan</h2>
+<p>Tidak ada. Fiddle tidak memiliki analitik, telemetri, SDK iklan, maupun pelaporan crash pihak ketiga. Pengembang tidak menerima, melihat, atau menyimpan data Anda apa pun.</p>
+
+<h2>Di mana data Anda disimpan</h2>
+<p>Semuanya disimpan secara lokal di perangkat Anda, dalam basis data lokal: lagu Anda (lirik dan akor), playlist dan setlist, band dengan nama dan instrumen anggota, pengaturan, dan catatan. Menghapus instalasi aplikasi akan menghapus semuanya.</p>
+
+<h2>Izin dan alasan diperlukannya</h2>
+<div class="perms">
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.INTERNET</code></span>
+    <span class="perm-label">Internet</span>
+    <p>Tidak digunakan untuk mengakses internet. Android mewajibkan izin ini untuk koneksi jaringan apa pun, termasuk koneksi pada jaringan Wi-Fi lokal, yang merupakan satu-satunya kegunaannya — fitur Sesi Langsung yang dijelaskan di bawah ini.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.RECORD_AUDIO</code></span>
+    <span class="perm-label">Mikrofon</span>
+    <p>Digunakan di dua bagian aplikasi. Pertama, pada tuner: mikrofon mendengarkan petikan senar selama layar tuner terbuka, untuk mengukur nada dan menunjukkan apakah nadanya lebih tinggi atau lebih rendah dari target. Untuk drum, tuner bekerja dengan cara yang sama, tetapi mengukur nada pada setiap baut secara terpisah, dan menunjukkan baut mana yang perlu dikencangkan atau dikendurkan agar semuanya seimbang. Kedua, selama sesi langsung, saat pemimpin memulai pengukuran latensi audio: aplikasi memutar serangkaian nada pendek dan mengukur kapan mikrofon mendengarnya, sehingga metronom dapat berbunyi klik pada saat yang sama di setiap ponsel. Dalam kedua kasus tersebut, suara diproses seketika, di memori ponsel, dan tidak pernah direkam ke dalam berkas, disimpan, atau dikirim ke mana pun. Aplikasi meminta izin ini hanya setelah menunjukkan kepada Anda untuk apa izin itu digunakan — saat Anda membuka tuner, atau saat Anda mengetuk "Izinkan mikrofon" pada layar Langsung — dan Anda boleh menolaknya; semua fitur lain dalam aplikasi berfungsi tanpa mikrofon. Mikrofon berhenti digunakan segera setelah Anda meninggalkan layar tuner atau aplikasi berpindah ke latar belakang.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>ACCESS_NETWORK_STATE</code> / <code>ACCESS_WIFI_STATE</code> / <code>CHANGE_WIFI_MULTICAST_STATE</code></span>
+    <span class="perm-label">Status jaringan dan multicast</span>
+    <p>Diperlukan agar perangkat anggota band dapat saling menemukan pada jaringan Wi-Fi yang sama (penemuan layanan mDNS, diumumkan sebagai <code>_fiddle-lan._tcp</code> melalui port TCP <code>47811</code>) dan tetap terhubung. Digunakan semata-mata untuk Sesi Langsung, dan tidak memberikan akses internet.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.FOREGROUND_SERVICE</code> / <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></span>
+    <span class="perm-label">Layanan latar depan</span>
+    <p>Menjaga metronom tetap berbunyi saat layar mati selama pertunjukan. Selagi metronom berjalan, Android menampilkan notifikasi tetap "Metronom sedang berbunyi" dengan kontrol untuk menghentikannya; notifikasi ini dihapus segera setelah Anda menghentikan bunyi klik.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.MODIFY_AUDIO_SETTINGS</code></span>
+    <span class="perm-label">Mengubah pengaturan audio</span>
+    <p>Diperlukan untuk memutar bunyi metronom dan akor.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>android.permission.VIBRATE</code></span>
+    <span class="perm-label">Getaran</span>
+    <p>Umpan balik haptik saat mengetuk.</p>
+  </div>
+  <div class="perm">
+    <span class="perm-name"><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code></span>
+    <span class="perm-label">Akses berkas — hanya Android 12 ke bawah</span>
+    <p>Dideklarasikan oleh pustaka berkas yang digunakan aplikasi, terbatas pada Android 12 ke bawah (<code>maxSdkVersion=32</code>). Fiddle tidak menjelajahi maupun menulis ke penyimpanan Anda dengan sendirinya: berkas yang Anda impor dipilih melalui pemilih berkas sistem, dan hasil ekspor diserahkan ke lembar berbagi sistem, tempat Anda memilih ke mana berkas itu dikirim.</p>
+  </div>
+</div>
+
+<h2>Sesi Langsung — satu-satunya fitur jaringan</h2>
+<p>Anggota band pada jaringan Wi-Fi yang sama dapat menghubungkan perangkat mereka secara langsung. Saat Anda memulai sesi, namanya diumumkan pada jaringan lokal dan terlihat oleh setiap perangkat di jaringan tersebut. Saat Anda bergabung, Anda mengirimkan kepada pemimpin nama tampilan yang Anda ketik dan pengenal acak yang dibuat aplikasi untuk perangkat Anda (bukan ID perangkat keras atau akun); pemimpin membagikan daftar anggota kepada semua orang dalam sesi. Pemimpin mengirimkan lagu yang sedang diputar dan, jika lagu itu dibuka dari setlist, nama dan urutan setlist tersebut; lagu yang belum Anda miliki — termasuk catatan pribadi pemimpin, tautan YouTube, nada dasar, capo, dan tempo untuk lagu tersebut — disalin ke perangkat Anda, dan lagu-lagu lain dari setlist tersebut mungkin disalin lebih awal agar dapat langsung terbuka. Data ini tidak pernah meninggalkan jaringan lokal dan tidak pernah melewati server mana pun. Koneksinya langsung dan tidak dienkripsi atau dilindungi kata sandi, sehingga siapa pun pada jaringan yang sama dapat bergabung atau mengamati sebuah sesi; gunakan Sesi Langsung pada jaringan Wi-Fi yang Anda percaya. Lagu yang diterima dari pemimpin disimpan ke perpustakaan Anda dan tetap ada di sana setelah sesi berakhir; hapus lagu tersebut seperti lagu lainnya jika Anda tidak menginginkannya. Setlist itu sendiri tidak disimpan. Bergabung bersifat sukarela dan hanya berlangsung selama Anda membiarkan sesi tetap terbuka.</p>
+
+<h2>Mengimpor lagu</h2>
+<p>Anda memilih berkas Anda sendiri (teks, <code>ChordPro</code>, Word, Excel, CSV, atau <code>JSON</code> perpustakaan Fiddle, yang digabungkan ke dalam perpustakaan Anda) melalui pemilih berkas sistem. Berkas dibaca secara lokal dan tidak pernah dikirim ke mana pun.</p>
+
+<h2>Ekspor dan berbagi</h2>
+<p>Anda dapat mengekspor lagu sebagai PDF, teks polos, atau <code>ChordPro</code>, setlist atau profil band (termasuk nama dan instrumen anggota) sebagai berkas <code>JSON</code>, dan seluruh perpustakaan Anda — termasuk catatan, favorit, dan lagu yang dibuang — sebagai cadangan <code>JSON</code>, semuanya melalui menu berbagi sistem. Anda memilih tujuannya; aplikasi tidak pernah mengirim apa pun atas inisiatifnya sendiri.</p>
+
+<h2>Cadangan Android</h2>
+<p>Fiddle memilih untuk tidak ikut serta dalam cadangan data aplikasi otomatis Android, sehingga sistem operasi tidak menyalin data aplikasi ke akun Google Anda. Jika Anda menginginkan salinan perpustakaan Anda, gunakan "Simpan cadangan perpustakaan (JSON)" di aplikasi.</p>
+
+<h2>Berkas sementara</h2>
+<p>Salinan lagu dan perpustakaan Anda yang diekspor atau dibagikan ditulis ke cache privat aplikasi dan digantikan pada saat Anda berikutnya mengekspor atau berbagi. Jika basis data aplikasi rusak, salinan yang diberi tanggal darinya dapat disimpan di folder privat aplikasi untuk keperluan pemulihan. Semua ini tetap berada di dalam penyimpanan privat aplikasi dan dihapus saat Anda menghapus instalasi aplikasi.</p>
+
+<h2>Berbagi dengan pihak ketiga</h2>
+<p>Kami tidak membagikan data dengan siapa pun, karena kami tidak mengumpulkan data apa pun.</p>
+
+<h2>Keamanan</h2>
+<p>Karena semua data tetap berada di perangkat Anda dan tidak ada yang dikirimkan kepada kami, tidak ada data Anda di server mana pun yang perlu dilindungi. Sandboxing aplikasi standar Android melindungi data lokal Anda sebagaimana halnya aplikasi lain di perangkat.</p>
+
+<h2>Anak-anak</h2>
+<p>Fiddle tidak ditujukan bagi anak-anak di bawah usia 13 tahun, dan tidak mengumpulkan data dari siapa pun, termasuk anak-anak.</p>
+
+<h2>Hak Anda dan kendali atas data Anda</h2>
+<p>Karena semuanya hanya disimpan di perangkat Anda, Anda selalu memiliki kendali penuh: Anda dapat melihat, mengedit, mengekspor, atau menghapus lagu, playlist, dan band Anda kapan saja di dalam aplikasi. Lagu yang dihapus dipindahkan ke Tong Sampah aplikasi, tempat Anda dapat memulihkannya; lagu tersebut tetap berada dalam basis data lokal aplikasi — dan dalam berkas cadangan perpustakaan mana pun yang telah Anda simpan — hingga Anda menghapus instalasi aplikasi atau menghapus penyimpanannya di pengaturan Android, yang keduanya akan menghapus semuanya secara permanen.</p>
+
+<h2>Perubahan pada kebijakan ini</h2>
+<p>Jika kebijakan ini berubah, versi yang diperbarui akan dipublikasikan di alamat yang sama ini, dengan tanggal pembaruan terakhir yang baru di bagian atas.</p>
+
+<h2>Kontak</h2>
+<p>Untuk pertanyaan tentang kebijakan ini, hubungi: <a href="mailto:support@nemgic.com"><code>support@nemgic.com</code></a></p>
+</article>
 </main>
 
 <footer>
-  <span data-t="footer">Fiddle — a chord book for musicians. Everything stays on your device.</span>
+  <span>&copy; 2026 Nemgic Software &middot; <a href="mailto:support@nemgic.com">support@nemgic.com</a></span>
+  &nbsp;&middot;&nbsp;
+  <a href="/">&larr; nemgic.com</a>
 </footer>
 
 <script>
-  (function () {
-    var KEY = 'fiddle-privacy-lang';
-    var docs = { sr: document.getElementById('doc-sr'), en: document.getElementById('doc-en') };
-    var buttons = Array.prototype.slice.call(document.querySelectorAll('.langswitch button'));
-    var kicker = document.querySelector('[data-t="kicker"]');
-    var footer = document.querySelector('[data-t="footer"]');
+(function () {
+  'use strict';
+  var KEY = 'fiddle-privacy-lang';
 
-    var strings = {
-      sr: { kicker: 'Politika privatnosti', footer: 'Fiddle — pesmarica sa akordima. Sve ostaje na vašem uređaju.' },
-      en: { kicker: 'Privacy Policy', footer: 'Fiddle — a chord book for musicians. Everything stays on your device.' }
-    };
+  // Picker order and metadata. code = short button label, tag = article lang
+  // attribute, name = the language's own name, used as title/aria-label.
+  var LANGS = [
+    { code: 'EN', tag: 'en',      name: 'English' },
+    { code: 'SR', tag: 'sr-Latn', name: 'Srpski (latinica)' },
+    { code: 'ЋИР', tag: 'sr-Cyrl', name: 'Српски (ћирилица)' },
+    { code: 'DE', tag: 'de',      name: 'Deutsch' },
+    { code: 'ES', tag: 'es',      name: 'Español' },
+    { code: 'PT', tag: 'pt-BR',   name: 'Português (Brasil)' },
+    { code: 'RU', tag: 'ru',      name: 'Русский' },
+    { code: 'FR', tag: 'fr',      name: 'Français' },
+    { code: 'IT', tag: 'it',      name: 'Italiano' },
+    { code: 'PL', tag: 'pl',      name: 'Polski' },
+    { code: 'TR', tag: 'tr',      name: 'Türkçe' },
+    { code: 'ZH', tag: 'zh-Hans', name: '简体中文' },
+    { code: 'JA', tag: 'ja',      name: '日本語' },
+    { code: 'KO', tag: 'ko',      name: '한국어' },
+    { code: 'HI', tag: 'hi',      name: 'हिन्दी' },
+    { code: 'ID', tag: 'id',      name: 'Bahasa Indonesia' }
+  ];
 
-    function apply(lang) {
-      docs.sr.hidden = lang !== 'sr';
-      docs.en.hidden = lang !== 'en';
-      buttons.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
-      });
-      kicker.textContent = strings[lang].kicker;
-      footer.textContent = strings[lang].footer;
-      document.documentElement.lang = lang === 'sr' ? 'sr-Latn' : 'en';
-      try { localStorage.setItem(KEY, lang); } catch (e) { /* private mode */ }
+  // Short/alternate forms accepted in ?lang= and mapped from navigator tags.
+  var ALIASES = { sr: 'sr-Latn', pt: 'pt-BR', zh: 'zh-Hans' };
+
+  var articles = {};
+  var available = [];
+  LANGS.forEach(function (l) {
+    var el = document.querySelector('article[lang="' + l.tag + '"]');
+    if (el) { articles[l.tag] = el; available.push(l); }
+  });
+
+  var switchEl = document.getElementById('langswitch');
+  var buttons = {};
+  available.forEach(function (l) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = l.code;
+    b.dataset.lang = l.tag;
+    b.title = l.name;
+    b.setAttribute('aria-label', l.name);
+    b.setAttribute('aria-pressed', 'false');
+    b.addEventListener('click', function () { apply(l.tag, true); });
+    switchEl.appendChild(b);
+    buttons[l.tag] = b;
+  });
+
+  function normalize(raw) {
+    if (!raw) return null;
+    var v = String(raw).trim();
+    var low = v.toLowerCase();
+    if (ALIASES[low]) return ALIASES[low];
+    for (var i = 0; i < LANGS.length; i++) {
+      if (LANGS[i].tag.toLowerCase() === low) return LANGS[i].tag;
     }
+    return null;
+  }
 
-    var initial = 'en';
-    var nav = (navigator.language || '').toLowerCase();
-    if (/^(sr|hr|bs|me)/.test(nav)) initial = 'sr';
+  function fromNavigatorTag(tag) {
+    var low = tag.toLowerCase();
+    var primary = low.split('-')[0];
+    if (/^(sr|hr|bs|me)(-|$)/.test(low)) {
+      return /cyrl/.test(low) ? 'sr-Cyrl' : 'sr-Latn';
+    }
+    if (primary === 'pt') return 'pt-BR';
+    if (primary === 'es') return 'es';
+    if (primary === 'zh') {
+      if (/hant|-tw|-hk/.test(low)) return 'en';
+      return 'zh-Hans';
+    }
+    if (primary === 'in') return 'id';
+    if (primary) {
+      var found = normalize(primary);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  function pickFromNavigator() {
+    var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    for (var i = 0; i < list.length; i++) {
+      var mapped = fromNavigatorTag(list[i] || '');
+      if (mapped && articles[mapped]) return mapped;
+    }
+    return null;
+  }
+
+  function urlLang() {
     try {
-      var saved = localStorage.getItem(KEY);
-      if (saved === 'sr' || saved === 'en') initial = saved;
-    } catch (e) { /* storage blocked */ }
+      var params = new URLSearchParams(window.location.search);
+      return normalize(params.get('lang'));
+    } catch (e) { return null; }
+  }
 
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () { apply(b.dataset.lang); });
+  function savedLang() {
+    try {
+      return localStorage.getItem(KEY);
+    } catch (e) { return null; }
+  }
+
+  function apply(tag, userInitiated) {
+    if (!articles[tag]) tag = 'en';
+    Object.keys(articles).forEach(function (t) {
+      articles[t].hidden = t !== tag;
     });
+    Object.keys(buttons).forEach(function (t) {
+      buttons[t].setAttribute('aria-pressed', String(t === tag));
+    });
+    document.documentElement.lang = tag;
+    var title = articles[tag].getAttribute('data-title');
+    if (title) {
+      document.title = title;
+      var sub = document.querySelector(".brand-sub");
+      if (sub) sub.textContent = title.replace(/^Fiddle\s*[—-]\s*/, "");
+    }
+    try { localStorage.setItem(KEY, tag); } catch (e) { /* private mode */ }
+    if (userInitiated) {
+      try {
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', tag);
+        history.replaceState(null, '', url.pathname + url.search + url.hash);
+      } catch (e) { /* ignore */ }
+    }
+  }
 
-    apply(initial);
-  })();
+  var initial = urlLang() && articles[urlLang()] ? urlLang() : null;
+  if (!initial) {
+    var saved = savedLang();
+    if (saved && articles[saved]) initial = saved;
+  }
+  if (!initial) initial = pickFromNavigator();
+  if (!initial || !articles[initial]) initial = 'en';
+
+  apply(initial, false);
+})();
 </script>
 </body>
 </html>
